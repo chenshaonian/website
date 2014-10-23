@@ -1,0 +1,18 @@
+*.class
+/.settings
+/.project
+/.classpath
+.idea
+*.iml
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
+/out
+*.log
+/src/main/product
+/src/main/webapp/App/css/view/**/**.css
+/src/main/webapp/App/view/**/**.js
+*.map
+logs

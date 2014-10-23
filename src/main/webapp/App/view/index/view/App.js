@@ -1,8 +1,8 @@
 define([
 	'require',
 	'text!../tpl/tpl.tpl',
-	'switch'
-], function (require, tpl, data) {
+	'../router/Router'
+], function (require, tpl, Router) {
 	return Backbone.View.extend({
 		el: $('.viewport'),
 		events: {
@@ -12,35 +12,39 @@ define([
 			this.initializeVar();
 			this.initializeEl();
 			this.initializeRouter();
+			this.initializeEvent();
+			this.renderView();
 		},
 		initializeVar: function () {
 		},
 		initializeEl: function () {
-			this.contentEl = this.$el.find('.inner');
+			var me = this;
 		},
 		initializeRouter: function () {
 			var me = this;
-			var Workspace = Backbone.Router.extend({
-				initialize: function () {
-					return Backbone.history.start();
-				},
-				routes: {
-					"": "main",
-					'*view': 'initView'
-				},
-				initView: function (router) {
-					console.info('router:', router);
-					if (router != '') {
-						require(['view/' + router + '/main'], function (view) {
-							me.contentEl.html(view.$el);
+			me.router = new Router(me);
+		},
+		initializeEvent  :function(){
+			var me = this;
+			var view;
+			me.on('init', function(router){
+				switch (router) {
+					case 'help':
+						alert('help');
+						break;
+					default :
+						require(['./Index'], function (view) {
+							view = new view();
+							$('.Bookinginterface_box').html(view.$el);
 						});
-					}
-				},
-				main: function (query, page) {
-					me.contentEl.html(tpl);
+						break;
 				}
-			});
-			new Workspace;
+			})
+		},
+		renderView  :function(){
+			var me = this;
+			me.$el.html(tpl);
+
 		}
 	});
 });
