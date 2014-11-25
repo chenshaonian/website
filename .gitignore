@@ -16,3 +16,4 @@
 /src/main/webapp/App/view/**/**.js
 *.map
 logs
+/guarded-island-5076
