@@ -1,6 +1,6 @@
 define(
 	[
-		'text!../tpl/tpl.tpl'
+		'text!../tpl/indexTpl.tpl'
 	], function (tpl) {
 		return Backbone.View.extend({
 			events: {

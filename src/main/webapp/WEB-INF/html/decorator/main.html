@@ -39,5 +39,42 @@
 <script src="/App/config.js">
 	require([$('meta[name=view]').attr('content')]);
 </script>
+<script>
+    (function(){
+        var $lists = $('.bgPictureShow li');
+        var $list = null;
+        var length = $lists.length;
+        console.info($lists);
+        var nowItem = '', nowIndex = 0;
+
+        setInterval(function(){
+            //获得当前图片位置
+            $.each($lists, function(i, v){
+                console.info(v);
+                if($(v).hasClass('show')){
+                    console.info('each nowindex:',v, i);
+                    nowIndex = i;
+                    $list = v;
+                    return false;
+                }
+                    console.info('im in else');
+                    nowIndex = 0;
+                    $list = $lists.eq(0);
+            });
+            //开始切换图片
+            console.info('nowindex:', nowIndex);
+            if(nowIndex < 9){
+                $($lists).eq(nowIndex).removeClass('show');
+                $($lists).eq(nowIndex+1).addClass('show');
+            }else{
+                $($lists).eq(nowIndex).removeClass('show');
+                $($lists).eq(0).addClass('show');
+            }
+            console.info($list);
+        }, 5000)
+
+    })();
+</script>
+
 </body>
 </html>
