@@ -44,7 +44,7 @@ define([
 		renderView  :function(){
 			var me = this;
 			console.info('renderview');
-			me.$el.html('11111111111111111111111111111111111111111111111111111111111111111');
+			me.$el.html('22222222222222222222222222');
 		}
 	});
 });

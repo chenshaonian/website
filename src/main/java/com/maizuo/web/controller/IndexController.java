@@ -29,6 +29,12 @@ public class IndexController extends BaseController {
 		m.put("user", user);
 		return "view/index";
 	}
+    @RequestMapping(value = {"/diaofa" },method = RequestMethod.GET)
+    public String diaofa(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/diaofa";
+    }
 
 	@RequestMapping(value = {"/login"},method = RequestMethod.GET)
 	public String login(HttpServletRequest request, ModelMap m) {
