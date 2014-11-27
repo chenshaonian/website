@@ -11,7 +11,7 @@
 
 	$('.imgPos li').click(function(e){
 		var me = this, index = 0;
-//            clearInterval(me.myInterval);
+		//            clearInterval(me.myInterval);
 		//list item变。
 		$('.imgPos li').removeClass('active');
 		$(this).addClass('active');
@@ -19,7 +19,16 @@
 		index = $(this).attr('data-index');
 		$($lists).removeClass('show');
 		$($lists).eq(index).addClass('show');
-//            me.startInterval();
+		//            me.startInterval();
+	});
+
+	$('.navbox li').hover(function(e){
+		console.info($(this).find(':first-child').eq(0).hasClass('jishugongyi'));
+		if($(this).find(':first-child').eq(0).hasClass('jishugongyi') || $(this).find(':first-child').eq(0).hasClass('diaofa')){
+			$(this).find('div').show();
+		}
+	}, function(){
+//		$('.navbox .lit').hide();
 	});
 	startInterval();
 	function startInterval() {

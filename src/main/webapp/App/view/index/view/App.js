@@ -33,18 +33,19 @@ define([
 						alert('help');
 						break;
 					default :
-//						require(['./Index'], function (view) {
-//							view = new view();
-//							$('.Bookinginterface_box').html(view.$el);
-//						});
+						require(['./Index'], function (view) {
+							console.info('require view');
+							view = new view();
+							me.$el.html(view.$el);
+						});
 						break;
 				}
 			})
 		},
 		renderView  :function(){
 			var me = this;
-			console.info('renderview');
-			me.$el.html('11111111111111111111111111111111111111111111111111111111111111111');
+//			console.info('renderview');
+//			me.$el.html(tpl);
 		}
 	});
 });
