@@ -4,14 +4,12 @@
 (function(){
 	var $lists = $('.bgPictureShow .picUl li');
 	var $list = null;
-	var length = $lists.length;
-	this.myInterval = null;
+	var length = $lists.length||0;
 	console.info($lists);
-	var nowItem = '', nowIndex = 0;
+	var nowIndex = 0;
 
 	$('.imgPos li').click(function(e){
-		var me = this, index = 0;
-		//            clearInterval(me.myInterval);
+		var me = this, index;
 		//list item变。
 		$('.imgPos li').removeClass('active');
 		$(this).addClass('active');
@@ -19,7 +17,6 @@
 		index = $(this).attr('data-index');
 		$($lists).removeClass('show');
 		$($lists).eq(index).addClass('show');
-		//            me.startInterval();
 	});
 
 	$('.navbox li').hover(function(e){
@@ -28,7 +25,7 @@
 			$(this).find('div').show();
 		}
 	}, function(){
-//		$('.navbox .lit').hide();
+		$(this).find('div').hide();
 	});
 	startInterval();
 	function startInterval() {

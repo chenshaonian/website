@@ -1,0 +1,10 @@
+.litMask {
+	position: absolute;
+	height: 78px;
+	width: 120px;
+	opacity: 0.2;
+	display: none;
+	background-color: #000000;
+	opacity :0.2 ;
+	filter: alpha(opacity = 20);
+}
