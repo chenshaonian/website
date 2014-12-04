@@ -2,9 +2,18 @@
 	position: absolute;
 	height: 78px;
 	width: 120px;
-	opacity: 0.2;
 	display: none;
 	background-color: #000000;
 	opacity :0.2 ;
+	filter: alpha(opacity = 20);
+}
+.headSubMask{
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	display: block;
+	background-color: #000000;
+	opacity :0.2 ;
+	z-index: -1;
 	filter: alpha(opacity = 20);
 }

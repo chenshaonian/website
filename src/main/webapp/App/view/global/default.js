@@ -20,12 +20,15 @@
 	});
 
 	$('.navbox li').hover(function(e){
-		console.info($(this).find(':first-child').eq(0).hasClass('jishugongyi'));
-		if($(this).find(':first-child').eq(0).hasClass('jishugongyi') || $(this).find(':first-child').eq(0).hasClass('diaofa')){
-			$(this).find('div').show();
+		if($(this).find(':first-child').eq(0).hasClass('diaofashishang') || $(this).find(':first-child').eq(0).hasClass('diaofazhishi')){
+//			$(this).find('div').show();
+			$('.headSubDiv').show();
 		}
 	}, function(){
-		$(this).find('div').hide();
+		if(!$('.headSubDiv').hover()) {
+//		$(this).find('div').hide();
+			$('.headSubDiv').hide();
+		}
 	});
 	startInterval();
 	function startInterval() {

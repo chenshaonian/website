@@ -17,5 +17,5 @@
 			"./src/main/webapp/App/lib/require/require.js"
 		]
 	},
-	"port": 80
+	"port": 8053
 }
