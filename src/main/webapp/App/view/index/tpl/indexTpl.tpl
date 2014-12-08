@@ -1,9 +1,31 @@
 <div class="content">
-	<div class="upBtn">向上</div>
 	<div class="contentWrap">
-	<div class="contentDiv movieShow">视频欣赏</div>
-	<div class="contentDiv productInfo">产品咨询</div>
-	<div class="contentDiv news">新闻动态</div>
-	<div class="contentDiv joinUs">联系我们</div>
+		<div class="contentDiv movieShow">
+			<img src="../../App/image/view/index/shipin.jpg" alt=""/>
+
+		</div>
+		<div class="contentDiv">
+			<div class="contentProduct">
+				<img src="../../App/image/view/index/chanpinzixun.jpg" alt=""/>
+
+				<div class="productInfo">
+					产品
+				</div>
+			</div>
+		</div>
+		<div class="contentDiv">
+			<div class="contentNews">
+				<img src="../../App/image/view/index/xinwenzixun.jpg" alt=""/>
+
+				<div class="news">新闻</div>
+			</div>
+		</div>
+		<div class="contentDiv ">
+			<div class="contentJoin">
+				<img src="../../App/image/view/index/jiamenghezuo.jpg" alt=""/>
+
+				<div class="joinUs">加入</div>
+			</div>
+		</div>
 	</div>
 </div>

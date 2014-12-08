@@ -1,14 +1,16 @@
 /**
  * Created by BBBernie on 2014/11/26.
  */
-(function(){
+(function () {
 	var $lists = $('.bgPictureShow .picUl li');
 	var $list = null;
-	var length = $lists.length||0;
+	var length = $lists.length || 0;
 	console.info($lists);
 	var nowIndex = 0;
+	var inerTime = null;
+	var currSubDiv;
 
-	$('.imgPos li').click(function(e){
+	$('.imgPos li').click(function (e) {
 		var me = this, index;
 		//list item变。
 		$('.imgPos li').removeClass('active');
@@ -19,17 +21,60 @@
 		$($lists).eq(index).addClass('show');
 	});
 
-	$('.navbox li').hover(function(e){
-		if($(this).find(':first-child').eq(0).hasClass('diaofashishang') || $(this).find(':first-child').eq(0).hasClass('diaofazhishi')){
-//			$(this).find('div').show();
-			$('.headSubDiv').show();
+	$('.headNavWrap a').hover(function (e) {
+		var className = $(e.currentTarget)[0].className || 'shouye';
+		currSubDiv = className;
+		$('.headSubDiv').hide();
+		if(inerTime){
+			clearTimeout(inerTime);
 		}
-	}, function(){
-		if(!$('.headSubDiv').hover()) {
-//		$(this).find('div').hide();
-			$('.headSubDiv').hide();
+		switch (className) {
+			case 'diaofashishang':
+				console.info('diaofashishang');
+				$('.subdiaofashishang').show().addClass('headSubDivShow');
+				break;
+			case 'diaofazhishi':
+				console.info('diaofazhishi');
+				$('.subdiaofazhishi').show().addClass('headSubDivShow');
+				break;
+			case 'diaofaanli':
+				console.info('diaofaanli');
+				$('.subdiaofaanli').show().addClass('headSubDivShow');
+				break;
+			case 'shipinxinshang':
+				console.info('shipinxinshang');
+				$('.subshipinxinshang').show().addClass('headSubDivShow');
+				break;
+			case 'zoujindsn':
+				console.info('zoujindsn');
+				$('.subzoujindsn').show().addClass('headSubDivShow');
+				break;
+			case 'shouye':
+				console.info('shouye');
+				break;
+		}
+	}, function (e) {
+		inerTime = setTimeout(function () {
+			if ($('.headSubDiv').hasClass('headSubDivShow')) {
+				$('.headSubDiv').hide().removeClass('headSubDivShow');
+			}
+		}, 20);
+	});
+	$('.headSubDiv').mouseenter(function (e) {
+		if (inerTime) {
+			clearTimeout(inerTime);
+		}
+		console.info('show');
+		if (currSubDiv) {
+			$('.' + currSubDiv).show();
 		}
 	});
+	$('.headSubDiv').mouseleave(function () {
+		$('.headSubDiv').hide().removeClass('headSubDivShow');
+		console.info('hide');
+	});
+
+
 	startInterval();
 	function startInterval() {
 		this.myInterval = setInterval(function () {

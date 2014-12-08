@@ -4,16 +4,28 @@
 	width: 120px;
 	display: none;
 	background-color: #000000;
-	opacity :0.2 ;
-	filter: alpha(opacity = 20);
+	opacity: 0.2;
+	filter: alpha(opacity=20);
 }
-.headSubMask{
+
+.headSubMask {
 	position: absolute;
-	height: 100px;
+	height: 200px;
 	width: 100%;
 	display: block;
 	background-color: #000000;
-	opacity :0.2 ;
+	opacity: 0.2;
 	z-index: -1;
-	filter: alpha(opacity = 20);
+	filter: alpha(opacity=20);
+}
+
+.contentDiv {
+	width: 260px;
+	height: 180px;
+	float: left;
+	margin: 0 5px;
+	position: relative;
+	background-color: #006039;
+	overflow: hidden;
+	opacity: 0.5 filter : alpha(opacity = 50);
 }

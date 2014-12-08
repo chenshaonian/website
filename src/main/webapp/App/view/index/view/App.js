@@ -6,7 +6,8 @@ define([
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
-
+			'mouseenter  .contentDiv':'contentDivEnter',
+			'mouseleave .contentDiv':'contentDivLeave'
 		},
 		initialize: function () {
 			this.initializeVar();
@@ -46,6 +47,22 @@ define([
 			var me = this;
 //			console.info('renderview');
 //			me.$el.html(tpl);
+		},
+		contentDivEnter  :function(e){
+			var me = this;
+			var currTarget = $(e.currentTarget);
+			currTarget.animate({
+				top: -180
+			},100);
+			console.info(currTarget);
+		},
+		contentDivLeave  :function(e){
+			var me = this;
+			var currTarget = $(e.currentTarget);
+			console.info(currTarget);
+			currTarget.animate({
+				top: 0
+			},100);
 		}
 	});
 });

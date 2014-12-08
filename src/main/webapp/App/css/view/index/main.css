@@ -1,0 +1,477 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+  font-family: '微软雅黑';
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-size: 12px;
+  color: #404040;
+  overflow-y: scroll;
+}
+div,
+form,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+span,
+b,
+i,
+em,
+input,
+form,
+img,
+a,
+font {
+  margin: 0;
+  padding: 0;
+}
+table,
+td,
+tr,
+th {
+  font-size: 12px;
+}
+input,
+select {
+  vertical-align: middle;
+}
+.cl {
+  clear: both;
+}
+ul,
+li {
+  list-style-type: none;
+}
+textarea {
+  font-size: 1em;
+  line-height: 18px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+a:link {
+  color: #2584b0;
+  text-decoration: none;
+}
+a:visited {
+  color: #2584b0;
+  text-decoration: none;
+}
+a:hover {
+  color: #2584b0;
+  text-decoration: underline;
+}
+a:active {
+  color: #2584b0;
+}
+.fl_ft {
+  float: left;
+}
+.fl_rg {
+  float: right;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.cGray,
+a.cGray:link,
+a.cGray:visited {
+  color: #343434;
+  font-size: 14px;
+}
+.cWhite,
+a.cWhite:link,
+a.cWhite:visited {
+  color: #fff;
+}
+a.cwhite:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.cttt,
+a.cttt:link,
+a.cttt:visited {
+  color: #b47200;
+}
+a.cttt:hover {
+  color: #b47200;
+  text-decoration: underline;
+}
+.cGreen,
+a.cGreen:link,
+a.cGreen:visited {
+  color: #a17500;
+}
+.cOrange,
+a.cOrange:link,
+a.cOrange:visited {
+  color: #f62;
+}
+.cOrange2,
+a.cOrange2:link,
+a.cOrange2:visited,
+a.cOrange2:hover {
+  color: #f62;
+  text-decoration: none;
+}
+.cYl,
+a.cYl:link,
+a.cYl:visited {
+  color: #fbd906;
+}
+.cBlack,
+a.cBlack:link,
+a.cBlack:visited {
+  color: #000;
+}
+.cMh,
+a.cMh:link,
+a.cMh:visited {
+  color: #e20042;
+}
+.font_c_red {
+  color: #f00;
+}
+.cbule,
+a.cbule:link,
+a.cbule:visited {
+  color: #29629c;
+}
+.cjj,
+a.cjj:link,
+a.cjj:visited {
+  color: #f7b00a;
+}
+.cjj2,
+a.cjj2:link,
+a.cjj2:visited {
+  color: #f7b00a;
+  text-decoration: underline;
+}
+.cred,
+a.cred:link,
+a.cred:visited {
+  color: #d00;
+}
+.cred2,
+a.cred2:link,
+a.cred2:visited {
+  color: #730000;
+}
+.chui,
+a.chui:link,
+a.chui:visited {
+  color: #7c7c7c;
+  font-weight: bold;
+}
+.cbule2,
+a.cbule2:link,
+a.cbule2:visited {
+  color: #3c6b8b;
+}
+.cbule4,
+a.cbule4:link,
+a.cbule4:visited {
+  color: #069;
+}
+.cbule3,
+a.cbule3:link,
+a.cbule3:visited {
+  color: #3c6b8b;
+  text-decoration: underline;
+}
+.huis,
+a.huis:link,
+a.huis:visited {
+  color: #666;
+}
+.huis2 {
+  color: #999;
+}
+.cBrown {
+  color: #3c2c2a;
+}
+.cBrown,
+a.cBrown:link,
+a.cBrown:visited {
+  color: #3c2c2a;
+}
+.cbule5,
+a.cbule5:link,
+a.cbule5:visited {
+  color: #889db6;
+}
+.fB {
+  font-weight: bold;
+}
+.fI {
+  font-style: italic;
+}
+.fx {
+  text-decoration: underline;
+}
+.fyh {
+  font-family: "微软雅黑";
+}
+.fht {
+  font-family: "黑体";
+}
+.f12px {
+  font-size: 12px;
+}
+.f14px {
+  font-size: 14px;
+}
+.f16px {
+  font-size: 16px;
+}
+.hide {
+  display: none;
+}
+.bgPictureShow {
+  position: absolute;
+  height: 800px;
+  min-width: 1200px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.bgPictureShow .picUl img {
+  height: 800px;
+  width: 100%;
+}
+.imgPos {
+  position: fixed;
+  left: 98%;
+  top: 150px;
+  z-index: 2;
+}
+.imgPos li {
+  display: block;
+  cursor: pointer;
+}
+#wrap {
+  height: 660px;
+  width: 1080px;
+  margin: 0 auto;
+}
+.navbox {
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 36px;
+  color: #d8943a;
+  min-width: 1080px;
+  background-color: #006039;
+}
+.navig {
+  background-color: #006039;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  color: #d8943a;
+  position: relative;
+}
+.navig:hover {
+  background-color: #00482c;
+}
+.homeNav,
+.diaofaNav,
+.jishuNav,
+.anliNav,
+.shishangNav,
+.dnsNav {
+  width: 120px;
+  margin: 0 5px;
+}
+.headNavWrap li {
+  width: 130px;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+.headNavWrap li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #d8943a;
+  text-decoration: none;
+}
+.headNavWrap li .lit {
+  position: absolute;
+  display: none;
+  width: 120px;
+}
+.headNavWrap li .lit a {
+  text-shadow: 1px 1px 0 #000;
+  line-height: 26px;
+  height: 26px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+.navbox .mainNav {
+  width: 250px;
+  margin-right: 20px;
+}
+.navbox li:hover {
+  background-color: #00482c;
+}
+.footerInfo {
+  background-color: #006039;
+  color: #d8943a;
+  min-width: 1080px;
+  height: 40px;
+  margin: 0 auto;
+}
+.headMain {
+  height: 50px;
+  width: 1080px;
+  margin: 0 auto;
+}
+.headMain .headLogo {
+  width: 200px;
+  margin-left: 100px;
+  float: left;
+}
+.headMain .headTel {
+  width: 300px;
+  margin-left: 100px;
+  float: left;
+}
+.headMain .headRight {
+  width: 220px;
+  margin-left: 100px;
+  float: left;
+}
+.headMain .headRight .leaveMsg,
+.headMain .headRight .weixin,
+.headMain .headRight .email {
+  float: left;
+  margin-right: 10px;
+}
+.headNav {
+  height: 36px;
+  min-width: 1080px;
+  background-color: #00482c;
+  margin: 0 auto;
+}
+.headNavWrap {
+  height: 100%;
+  width: 800px;
+  margin: 0 auto;
+}
+.headSubDiv {
+  width: 100%;
+  height: 200px;
+  display: none;
+  position: absolute;
+}
+.headSubDivWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.headSubContent {
+  color: #fff;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+}
+.headSubNavTile {
+  width: 100%;
+  margin: 10px 5px;
+  height: 30px;
+  float: left;
+  cursor: pointer;
+  border-bottom: solid 1px #fff;
+}
+.headSubNavTile a {
+  text-shadow: 1px 1px 0 #000;
+  line-height: 26px;
+  height: 26px;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+.headSubNavTile a:hover {
+  color: #d8943a;
+  background-color: transparent;
+}
+.headSubNav {
+  float: left;
+  width: 250px;
+  height: 100%;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+.headSubImg {
+  float: left;
+  width: 200px;
+  height: 100%;
+}
+.headSubImg img {
+  margin-top: 20px;
+}
+.content {
+  height: 660px;
+  min-width: 1080px;
+  overflow-y: hidden;
+}
+.contentWrap {
+  margin-top: 480px;
+}
+.contentDiv img {
+  width: 100%;
+  height: 180px;
+}
+.productInfo,
+.news,
+.joinUs {
+  width: 100%;
+  height: 180px;
+  background-color: #fff;
+}
+.contentNews,
+.contentProduct,
+.contentJoin {
+  width: 100%;
+  height: 360px;
+  position: absolute;
+}
