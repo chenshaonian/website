@@ -50,19 +50,27 @@ define([
 		},
 		contentDivEnter  :function(e){
 			var me = this;
-			var currTarget = $(e.currentTarget);
+			var currTarget = $(e.currentTarget).find('div:first');
+//			if(currTarget.is(':animated')){
+//				console.info('isanimate');
+//				return false;
+//			}
 			currTarget.animate({
 				top: -180
-			},100);
+			},300);
 			console.info(currTarget);
 		},
 		contentDivLeave  :function(e){
 			var me = this;
-			var currTarget = $(e.currentTarget);
+			var currTarget = $(e.currentTarget).find('div:first');
+//			if(currTarget.is(':animated')){
+//				console.info('isanimate');
+//				return false;
+//			}
 			console.info(currTarget);
 			currTarget.animate({
 				top: 0
-			},100);
+			},300);
 		}
 	});
 });

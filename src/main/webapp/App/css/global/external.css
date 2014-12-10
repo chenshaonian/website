@@ -19,13 +19,17 @@
 	filter: alpha(opacity=20);
 }
 
-.contentDiv {
+.contentDivMask {
 	width: 260px;
 	height: 180px;
 	float: left;
 	margin: 0 5px;
 	position: relative;
-	background-color: #006039;
 	overflow: hidden;
-	opacity: 0.5 filter : alpha(opacity = 50);
+	opacity: 0.5;
+	filter : alpha(opacity = 50);
+}
+.contentDiv img{
+	opacity: 0.8;
+	filter : alpha(opacity = 80);
 }

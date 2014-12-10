@@ -77,19 +77,19 @@ textarea {
   overflow-y: auto;
 }
 a:link {
-  color: #2584b0;
+  color: #fff;
   text-decoration: none;
 }
 a:visited {
-  color: #2584b0;
+  color: #fff;
   text-decoration: none;
 }
 a:hover {
-  color: #2584b0;
-  text-decoration: underline;
+  color: #fff;
+  text-decoration: none;
 }
 a:active {
-  color: #2584b0;
+  color: #fff;
 }
 .fl_ft {
   float: left;
@@ -457,16 +457,53 @@ a.cbule5:visited {
 .contentWrap {
   margin-top: 480px;
 }
+.contentDiv {
+  width: 260px;
+  height: 180px;
+  float: left;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
 .contentDiv img {
   width: 100%;
   height: 180px;
 }
-.productInfo,
-.news,
-.joinUs {
+.productInfo {
   width: 100%;
   height: 180px;
-  background-color: #fff;
+  color: #fff;
+}
+.productInfo .pruductTitle {
+  height: 40px;
+  width: 160px;
+  float: left;
+  font-size: 16px;
+  color: #d8943a;
+}
+.productInfo .productMore {
+  float: right;
+  height: 40px;
+  width: 80px;
+  font-size: 18px;
+}
+.productInfo .productList {
+  height: 140px;
+  width: 260px;
+  float: left;
+}
+.productInfo .productList .productListImg {
+  height: 80px;
+  width: 80px;
+  margin: 5px;
+  background-color: #e27c79;
+  float: left;
+}
+.productInfo .productList .productListSummary {
+  height: 120px;
+  width: 160px;
+  text-align: center;
+  float: left;
 }
 .contentNews,
 .contentProduct,
@@ -474,4 +511,54 @@ a.cbule5:visited {
   width: 100%;
   height: 360px;
   position: absolute;
+}
+.news {
+  width: 100%;
+  height: 180px;
+  color: #fff;
+}
+.news .newsTitle {
+  height: 40px;
+  width: 160px;
+  float: left;
+  font-size: 16px;
+  color: #d8943a;
+}
+.news .newsMore {
+  float: right;
+  height: 40px;
+  width: 80px;
+  font-size: 18px;
+}
+.news .newsList {
+  height: 140px;
+  width: 260px;
+  float: left;
+}
+.news .newsList ul li {
+  margin-top: 10px;
+}
+.news .newsList ul li a {
+  color: #fff;
+}
+.news .newsList ul li .listTitle {
+  display: inline-block;
+  width: 150px;
+  height: 20px;
+  overflow: hidden;
+}
+.news .newsList ul li .listDate {
+  display: inline-block;
+  float: right;
+}
+.joinUs {
+  width: 100%;
+  height: 180px;
+  color: #fff;
+}
+.joinUs .joinUsTitle {
+  height: 40px;
+  width: 120px;
+  float: left;
+  background-color: #ed2;
 }
