@@ -38,7 +38,7 @@
 						<!--<div class="productListImg"></div>-->
 						<!--<div class="productListSummary">阿斯顿发啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊是对方</div>-->
 						<ul>
-							<li><a href="javascript:0;"><span class="listTitle">深圳市戴丝诺美容美发有限公司</span><span class="listDate">2010/02/01</span></a></li>
+							<li><a href="/news#!123"><span class="listTitle">深圳市戴丝诺美容美发有限公司</span><span class="listDate">2010/02/01</span></a></li>
 							<li><a href="javascript:0;"><span class="listTitle">深圳市戴丝诺美容美发有限公司</span><span class="listDate">2010/02/01</span></a></li>
 							<li><a href="javascript:0;"><span class="listTitle">深圳市戴丝诺美容美发有限公司</span><span class="listDate">2010/02/01</span></a></li>
 							<li><a href="javascript:0;"><span class="listTitle">深圳市戴丝诺美容美发有限公司</span><span class="listDate">2010/02/01</span></a></li>

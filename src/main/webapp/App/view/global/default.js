@@ -20,7 +20,16 @@
 		$($lists).removeClass('show');
 		$($lists).eq(index).addClass('show');
 	});
-
+	$('.weixin').hover(function(){
+		$('.weixinHide').show();
+	}, function(){
+		$('.weixinHide').hide();
+	});
+	$('.email').hover(function(){
+		$('.emailHide').show();
+	}, function(){
+		$('.emailHide').hide();
+	});
 
 	$('.headSubDiv').mouseenter(function (e) {
 		console.info('headSubDiv mouse enter');

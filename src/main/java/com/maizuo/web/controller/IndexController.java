@@ -29,14 +29,57 @@ public class IndexController extends BaseController {
 		m.put("user", user);
 		return "view/index";
 	}
-    @RequestMapping(value = {"/diaofa" },method = RequestMethod.GET)
-    public String diaofa(HttpServletRequest request, ModelMap m) {
+    @RequestMapping(value = {"/news" },method = RequestMethod.GET)
+    public String news(HttpServletRequest request, ModelMap m) {
         User user = new User();//userService.getUserById(1);
         m.put("user", user);
-        return "view/diaofa";
+        return "view/news";
+    }
+    @RequestMapping(value = {"/product" },method = RequestMethod.GET)
+    public String product(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/product";
+    }
+    @RequestMapping(value = {"/joinus" },method = RequestMethod.GET)
+    public String joinUs(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/joinus";
+    }
+    @RequestMapping(value = {"/diaofashishang" },method = RequestMethod.GET)
+    public String diaofashishang(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/diaofashishang";
+    }
+    @RequestMapping(value = {"/diaofazhishi" },method = RequestMethod.GET)
+    public String diaofazhishi(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/diaofazhishi";
+    }
+    @RequestMapping(value = {"/diaofaanli" },method = RequestMethod.GET)
+    public String diaofaanli(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/diaofaanli";
+    }
+    @RequestMapping(value = {"/shipinxinshang" },method = RequestMethod.GET)
+    public String shipinxinshang(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/shipinxinshang";
+    }
+    @RequestMapping(value = {"/zoujindsn" },method = RequestMethod.GET)
+    public String zoujindsn(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/zoujindsn";
     }
 
-	@RequestMapping(value = {"/login"},method = RequestMethod.GET)
+
+    @RequestMapping(value = {"/login"},method = RequestMethod.GET)
 	public String login(HttpServletRequest request, ModelMap m) {
 		return "view/login";
 	}

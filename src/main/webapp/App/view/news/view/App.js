@@ -1,15 +1,16 @@
 define([
 	'require',
-	'text!../tpl/indexTpl.tpl',
+	'text!../tpl/tpl.html',
 	'../router/Router'
 ], function (require, tpl, Router) {
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
-			'mouseenter  .contentDiv':'contentDivEnter',
-			'mouseleave .contentDiv':'contentDivLeave'
+//			'mouseenter  .contentDiv':'contentDivEnter',
+//			'mouseleave .contentDiv':'contentDivLeave'
 		},
 		initialize: function () {
+			console.info('init app');
 			this.initializeVar();
 			this.initializeEl();
 			this.initializeEvent();
@@ -17,6 +18,7 @@ define([
 			this.renderView();
 		},
 		initializeVar: function () {
+			var me = this;
 		},
 		initializeEl: function () {
 			var me = this;
@@ -34,12 +36,14 @@ define([
 						alert('help');
 						break;
 					default :
-						require(['./Index'], function (view) {
-							console.info('require view');
-							view = new view();
-							me.$el.html(view.$el);
-						});
-						break;
+						alert('news id: '+router)
+						console.info();
+//						require(['./Index'], function (view) {
+//							console.info('require view');
+//							view = new view();
+							me.$el.html(tpl);
+//						});
+//						break;
 				}
 			})
 		},
@@ -47,30 +51,30 @@ define([
 			var me = this;
 //			console.info('renderview');
 //			me.$el.html(tpl);
-		},
-		contentDivEnter  :function(e){
-			var me = this;
-			var currTarget = $(e.currentTarget).find('div:first');
+//		},
+//		contentDivEnter  :function(e){
+//			var me = this;
+//			var currTarget = $(e.currentTarget).find('div:first');
 //			if(currTarget.is(':animated')){
 //				console.info('isanimate');
 //				return false;
 //			}
-			currTarget.animate({
-				top: -180
-			},300);
-			console.info(currTarget);
-		},
-		contentDivLeave  :function(e){
-			var me = this;
-			var currTarget = $(e.currentTarget).find('div:first');
+//			currTarget.animate({
+//				top: -180
+//			},300);
+//			console.info(currTarget);
+//		},
+//		contentDivLeave  :function(e){
+//			var me = this;
+//			var currTarget = $(e.currentTarget).find('div:first');
 //			if(currTarget.is(':animated')){
 //				console.info('isanimate');
 //				return false;
 //			}
-			console.info(currTarget);
-			currTarget.animate({
-				top: 0
-			},300);
+//			console.info(currTarget);
+//			currTarget.animate({
+//				top: 0
+//			},300);
 		}
 	});
 });

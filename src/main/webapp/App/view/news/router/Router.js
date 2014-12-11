@@ -8,11 +8,12 @@ define([
 		initialize: function (view) {
 			var me = this;
 			me.view = view;
+			console.info('init router');
 			Backbone.history.start();
 		},
 		routes: {
 			"": "main",
-			'!*view': 'initView'
+			'!:id': 'initView'
 		},
 		initView: function (router) {
 			var me = this;
