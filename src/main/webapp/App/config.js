@@ -41,6 +41,9 @@ requirejs.config({
 		jstween: './lib/plugin/asset/jstween-1.1/jstween-1.1',
 		PubSub: './lib/plugin/jquery/PubSub/PubSub',
 		iscroll: './lib/plugin/asset/iscroll/iscroll',
+		summernote: './lib/plugin/asset/summernote/summernote.min',
+//		xheditor: './lib/plugin/asset/xheditor/xheditor-1.2.1.min',
+		kindeditor: './lib/plugin/asset/kindeditor/kindeditor',
 
 		/* jquery plugins */
 		pep: './lib/plugin/jquery/pep/jquery.pep',

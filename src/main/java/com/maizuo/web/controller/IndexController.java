@@ -79,6 +79,15 @@ public class IndexController extends BaseController {
     }
 
 
+
+
+    @RequestMapping(value = {"/admin"},method = RequestMethod.GET)
+    public String admin(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/admin";
+    }
+
     @RequestMapping(value = {"/login"},method = RequestMethod.GET)
 	public String login(HttpServletRequest request, ModelMap m) {
 		return "view/login";

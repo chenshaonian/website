@@ -14,7 +14,8 @@
 			"./src/main/webapp/App/lib/underscore/underscore.string.js",
 			"./src/main/webapp/App/lib/underscore/string.js",
 			"./src/main/webapp/App/lib/backbone/backbone.js",
-			"./src/main/webapp/App/lib/require/require.js"
+			"./src/main/webapp/App/lib/require/require.js",
+			"./src/main/webapp/App/lib/plugin/asset/kindeditor/kindeditor.js"
 		]
 	},
 	"port": 8053

@@ -1,7 +1,8 @@
 define([
 	'require',
 	'text!../tpl/indexTpl.tpl',
-	'../router/Router'
+	'../router/Router',
+	'kindeditor'
 ], function (require, tpl, Router) {
 	return Backbone.View.extend({
 		el: $('#wrap'),
@@ -15,6 +16,7 @@ define([
 			this.initializeEvent();
 			this.initializeRouter();
 			this.renderView();
+			setTimeout(this.startNote(),1000);
 		},
 		initializeVar: function () {
 		},
@@ -46,7 +48,15 @@ define([
 		renderView  :function(){
 			var me = this;
 //			console.info('renderview');
-//			me.$el.html(tpl);
+			me.$el.html(tpl);
+		},
+		startNote  :function(){
+			var me = this;
+//			console.info('startnote');
+//			KindEditor.ready(function(K) {
+//				window.editor = K.create('#editor_id');
+//			});
+////			$('#summernote').summernote();//			$('.summernote').summernote();
 		},
 		contentDivEnter  :function(e){
 			var me = this;
