@@ -283,6 +283,7 @@ a.cbule5:visited {
 .imgPos li {
   display: block;
   cursor: pointer;
+  background: url("/App/image/global/indexbg/check.png");
 }
 #wrap {
   height: 660px;
@@ -385,16 +386,22 @@ a.cbule5:visited {
 .headMain .headRight .email {
   float: left;
   margin-right: 10px;
-}
-.headMain .headRightHide {
-  position: absolute;
+  cursor: pointer;
 }
 .headMain .headRightHide .weixinHide {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 850px;
   width: 150px;
   height: 150px;
 }
 .headMain .headRightHide .emailHide {
-  width: 150px;
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 900px;
+  width: 180px;
   height: 40px;
   background-color: #ee0101;
 }
@@ -751,6 +758,7 @@ a.cbule5:visited {
 .imgPos li {
   display: block;
   cursor: pointer;
+  background: url("/App/image/global/indexbg/check.png");
 }
 #wrap {
   height: 660px;
@@ -853,16 +861,22 @@ a.cbule5:visited {
 .headMain .headRight .email {
   float: left;
   margin-right: 10px;
-}
-.headMain .headRightHide {
-  position: absolute;
+  cursor: pointer;
 }
 .headMain .headRightHide .weixinHide {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 850px;
   width: 150px;
   height: 150px;
 }
 .headMain .headRightHide .emailHide {
-  width: 150px;
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 900px;
+  width: 180px;
   height: 40px;
   background-color: #ee0101;
 }

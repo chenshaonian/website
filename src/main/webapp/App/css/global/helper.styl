@@ -196,7 +196,7 @@ a.cttt:hover
 .bgPictureShow
 	position: absolute
 	height: 800px
-	min-width 1200px
+	min-width 1080px
 	left 0
 	top 0
 	z-index -1
@@ -212,8 +212,13 @@ a.cttt:hover
 	li
 		display: block
 		cursor: pointer
+		height: 16px
+		width: 16px
+		background: url('/App/image/global/indexbg/uncheck.png')
+.img_active
+	background: url('/App/image/global/indexbg/check.png') !important
 #wrap
-	height 660px
+	height 640px
 	width 1080px
 	margin 0 auto
 .navbox
@@ -273,8 +278,7 @@ a.cttt:hover
 	height: 40px
 	margin: 0 auto
 .headMain
-	height 50px
-	width 1080px
+	width 100%
 	margin 0 auto
 	position: relative
 	.headLogo
@@ -286,26 +290,28 @@ a.cttt:hover
 		margin-left 100px
 		float left
 	.headRight
-		width 220px
-		margin-left 100px
-		float left
+		width 230px
+		height: 60px
+		position absolute
+		left 78%
+		top 20px
 		.leaveMsg,.weixin,.email
+			width 72px
+			height 36px
 			float: left
-			margin-right 10px
 			cursor pointer
 	.headRightHide
+		width 230px
+		height: 60px
+		position absolute
+		left 78%
+		top 80px
 		.weixinHide
-			position absolute
 			display none
-			top 50px
-			left 850px
 			width 150px
 			height 150px
 		.emailHide
-			position absolute
 			display none
-			top 50px
-			left 900px
 			width 180px
 			height 40px
 			background-color: #ee0101

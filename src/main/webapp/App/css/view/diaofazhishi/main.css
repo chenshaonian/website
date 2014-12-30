@@ -265,7 +265,7 @@ a.cbule5:visited {
 .bgPictureShow {
   position: absolute;
   height: 800px;
-  min-width: 1200px;
+  min-width: 1080px;
   left: 0;
   top: 0;
   z-index: -1;
@@ -283,9 +283,15 @@ a.cbule5:visited {
 .imgPos li {
   display: block;
   cursor: pointer;
+  height: 16px;
+  width: 16px;
+  background: url("/App/image/global/indexbg/uncheck.png");
+}
+.img_active {
+  background: url("/App/image/global/indexbg/check.png") !important;
 }
 #wrap {
-  height: 660px;
+  height: 640px;
   width: 1080px;
   margin: 0 auto;
 }
@@ -360,9 +366,9 @@ a.cbule5:visited {
   margin: 0 auto;
 }
 .headMain {
-  height: 50px;
-  width: 1080px;
+  width: 100%;
   margin: 0 auto;
+  position: relative;
 }
 .headMain .headLogo {
   width: 200px;
@@ -375,15 +381,37 @@ a.cbule5:visited {
   float: left;
 }
 .headMain .headRight {
-  width: 220px;
-  margin-left: 100px;
-  float: left;
+  width: 230px;
+  height: 60px;
+  position: absolute;
+  left: 78%;
+  top: 20px;
 }
 .headMain .headRight .leaveMsg,
 .headMain .headRight .weixin,
 .headMain .headRight .email {
+  width: 72px;
+  height: 36px;
   float: left;
-  margin-right: 10px;
+  cursor: pointer;
+}
+.headMain .headRightHide {
+  width: 230px;
+  height: 60px;
+  position: absolute;
+  left: 78%;
+  top: 80px;
+}
+.headMain .headRightHide .weixinHide {
+  display: none;
+  width: 150px;
+  height: 150px;
+}
+.headMain .headRightHide .emailHide {
+  display: none;
+  width: 180px;
+  height: 40px;
+  background-color: #ee0101;
 }
 .headNav {
   height: 36px;

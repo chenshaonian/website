@@ -31,11 +31,10 @@ define([
 		imgLiClick  :function(e){
 			var me = this, index;
 			var currentTarget = e.currentTarget;
-			console.info('imgliclick');
 			var $lists = $('.bgPictureShow .picUl li');
 			//list item变。
-			$(currentTarget).removeClass('active');
-			$(currentTarget).addClass('active');
+			$(currentTarget).siblings().removeClass('img_active');
+			$(currentTarget).addClass('img_active');
 			//图片变
 			index = $(currentTarget).attr('data-index');
 			$($lists).removeClass('show');
@@ -44,6 +43,7 @@ define([
 		startInterval  :function(){
 			var me = this;
 			var $lists = me.$('.bgPictureShow .picUl li');
+			var $lists_pos = me.$('.imgPos li');
 			var $list = null;
 			var length = $lists.length || 0;
 			var nowIndex = 0;
@@ -53,22 +53,23 @@ define([
 				//获得当前图片位置
 				$.each($lists, function (i, v) {
 					if ($(v).hasClass('show')) {
-						nowIndex = i;
-					$list = v;
-						return false;
+						return nowIndex = i;
+//					}else {
+//						nowIndex = 0;
 					}
-					nowIndex = 0;
-					$list = $lists.eq(0);
 				});
-				console.info($lists);
-
+console.info(nowIndex);
 				//开始切换图片
-				if (nowIndex < 9) {
+				if (nowIndex < 3) {
 					$($lists).eq(nowIndex).removeClass('show');
 					$($lists).eq(nowIndex + 1).addClass('show');
+					$($lists_pos).eq(nowIndex).removeClass('img_active');
+					$($lists_pos).eq(nowIndex + 1).addClass('img_active');
 				} else {
 					$($lists).eq(nowIndex).removeClass('show');
 					$($lists).eq(0).addClass('show');
+					$($lists_pos).eq(nowIndex).removeClass('img_active');
+					$($lists_pos).eq(0).addClass('img_active');
 				}
 			}, 5000)
 		}

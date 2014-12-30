@@ -18,5 +18,5 @@
 			"./src/main/webapp/App/lib/plugin/asset/kindeditor/kindeditor.js"
 		]
 	},
-	"port": 8053
+	"port": 80
 }
