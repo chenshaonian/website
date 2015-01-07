@@ -17,11 +17,11 @@
 <div class="content">
 	<div class="contentWrap">
 		<div class="contentDiv movieShow">
-			<img src="../../App/image/global/logo/video.jpg" alt=""/>
+			<img src="../../App/image/view/index/shipin.png" alt=""/>
 		</div>
 		<div class="contentDiv">
 			<div class="contentProduct">
-				<img src="../../App/image/global/logo/light.png" alt=""/>
+				<img src="../../App/image/view/index/chanpinzixun.png" alt=""/>
 				<div class="productInfo">
 					<div class="pruductTitle">| 产品资讯Product</div>
 					<div class="productMore"><a href="#">+MORE</a></div>
@@ -36,7 +36,7 @@
 		</div>
 		<div class="contentDiv">
 			<div class="contentNews">
-				<img src="../../App/image/global/logo/earth.png" alt=""/>
+				<img src="../../App/image/view/index/xinwenzixun.png" alt=""/>
 
 				<div class="news">
 					<div class="newsTitle">| 新闻资讯NEWS</div>
@@ -55,11 +55,14 @@
 		</div>
 		<div class="contentDiv ">
 			<div class="contentJoin">
-				<img src="../../App/image/global/logo/phone.png" alt=""/>
+				<img src="../../App/image/view/index/jiamenghezuo.png" alt=""/>
 				<div class="joinUs">
-					<div class="joinTitle">| 加盟合作 Cooperation</div>
+					<div class="joinUsTitle">| 加盟合作 Cooperation</div>
+					<div class="joinUsIntroduction">
 					阿斯顿金佛爬山的经费怕是多晶硅片现场将股票恢复噶我陪广发大盘管家婆人感觉然后该频道苟富贵的阿股份和分工会u
-					<div class="hotTelphone">咨询热线：0755-26656882</div></div>
+					</div>
+					<div class="hotTelphone">咨询热线：0755-26656882</div>
+				</div>
 			</div>
 			<div class="contentDivMask"></div>
 		</div>

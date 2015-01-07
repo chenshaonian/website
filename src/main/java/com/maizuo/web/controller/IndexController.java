@@ -59,17 +59,17 @@ public class IndexController extends BaseController {
         m.put("user", user);
         return "view/diaofazhishi";
     }
-    @RequestMapping(value = {"/diaofaanli" },method = RequestMethod.GET)
-    public String diaofaanli(HttpServletRequest request, ModelMap m) {
+    @RequestMapping(value = {"/diaofajianshang" },method = RequestMethod.GET)
+    public String diaofajianshang(HttpServletRequest request, ModelMap m) {
         User user = new User();//userService.getUserById(1);
         m.put("user", user);
-        return "view/diaofaanli";
+        return "view/diaofajianshang";
     }
-    @RequestMapping(value = {"/shipinxinshang" },method = RequestMethod.GET)
-    public String shipinxinshang(HttpServletRequest request, ModelMap m) {
+    @RequestMapping(value = {"/diaofazixun" },method = RequestMethod.GET)
+    public String diaofazixun(HttpServletRequest request, ModelMap m) {
         User user = new User();//userService.getUserById(1);
         m.put("user", user);
-        return "view/shipinxinshang";
+        return "view/diaofazixun";
     }
     @RequestMapping(value = {"/zoujindsn" },method = RequestMethod.GET)
     public String zoujindsn(HttpServletRequest request, ModelMap m) {
@@ -77,7 +77,10 @@ public class IndexController extends BaseController {
         m.put("user", user);
         return "view/zoujindsn";
     }
-
+    @RequestMapping(value = {"/map" },method = RequestMethod.GET)
+    public String map(HttpServletRequest request, ModelMap m) {
+        return "view/map";
+    }
 
 
 

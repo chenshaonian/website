@@ -429,6 +429,7 @@ a.cbule5:visited {
   height: 200px;
   display: none;
   position: absolute;
+  z-index: 2;
 }
 .headSubDivWrap {
   position: relative;
@@ -586,9 +587,18 @@ a.cbule5:visited {
 }
 .joinUs .joinUsTitle {
   height: 40px;
-  width: 120px;
-  float: left;
-  background-color: #ed2;
+  width: 180px;
+  font-size: 16px;
+  color: #d8943a;
+}
+.joinUs .joinUsIntroduction {
+  height: 80px;
+  width: 260px;
+  text-align: left;
+}
+.joinUs .hotTelphone {
+  color: #898000;
+  font-size: 18px;
 }
 .videoFrame {
   position: absolute;

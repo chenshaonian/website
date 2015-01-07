@@ -52,13 +52,13 @@
 				console.info('diaofazhishi');
 				$('.subdiaofazhishi').show().addClass('headSubDivShow');
 				break;
-			case 'diaofaanli':
-				console.info('diaofaanli');
-				$('.subdiaofaanli').show().addClass('headSubDivShow');
+			case 'diaofajianshang':
+				console.info('diaofajianshang');
+				$('.subdiaofajianshang').show().addClass('headSubDivShow');
 				break;
-			case 'shipinxinshang':
-				console.info('shipinxinshang');
-				$('.subshipinxinshang').show().addClass('headSubDivShow');
+			case 'diaofazixun':
+				console.info('diaofazixun');
+				$('.subdiaofazixun').show().addClass('headSubDivShow');
 				break;
 			case 'zoujindsn':
 				console.info('zoujindsn');

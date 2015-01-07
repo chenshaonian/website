@@ -429,6 +429,7 @@ a.cbule5:visited {
   height: 200px;
   display: none;
   position: absolute;
+  z-index: 2;
 }
 .headSubDivWrap {
   position: relative;
@@ -477,116 +478,127 @@ a.cbule5:visited {
 .headSubImg img {
   margin-top: 20px;
 }
-.content {
-  height: 660px;
-  min-width: 1080px;
-  overflow-y: hidden;
+#wrap {
+  background-color: #eee;
 }
-.contentWrap {
-  margin-top: 480px;
-}
-.contentDiv {
-  width: 260px;
-  height: 180px;
+.content-left {
   float: left;
-  margin: 0 5px;
-  position: relative;
-  overflow: hidden;
+  width: 220px;
+  height: 600px;
 }
-.contentDiv img {
-  width: 100%;
-  height: 180px;
-}
-.productInfo {
-  width: 100%;
-  height: 180px;
-  color: #fff;
-}
-.productInfo .pruductTitle {
-  height: 40px;
-  width: 160px;
+.content-right {
   float: left;
-  font-size: 16px;
-  color: #d8943a;
+  width: 860px;
+  height: 100%;
 }
-.productInfo .productMore {
-  float: right;
-  height: 40px;
-  width: 80px;
+.catalog-list {
+  float: left;
+  width: 220px;
+  height: 600px;
+}
+.catalog-list .catalog-head {
+  margin: 10px auto;
+}
+.catalog-list .catalog-erweiCode {
+  padding-top: 15px;
+  background-color: #054f2c;
+}
+.catalog-items {
+  background-color: #054f2c;
+  cursor: pointer;
+}
+.catalog-items .catalog-item {
+  height: 55px;
+  line-height: 55px;
   font-size: 18px;
+  color: #eee;
 }
-.productInfo .productList {
-  height: 140px;
-  width: 260px;
-  float: left;
+.catalog-items .catalog-item .catalog-item-in {
+  height: 55px;
+  width: 120px;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto;
 }
-.productInfo .productList .productListImg {
-  height: 80px;
-  width: 80px;
-  margin: 5px;
-  background-color: #e27c79;
-  float: left;
+.catalog-items .item-atived {
+  background-color: #898000;
 }
-.productInfo .productList .productListSummary {
-  height: 120px;
-  width: 160px;
-  text-align: center;
-  float: left;
+.catalog-items .item-atived .catalog-item-in {
+  border-bottom: none;
 }
-.contentNews,
-.contentProduct,
-.contentJoin {
-  width: 100%;
-  height: 360px;
-  position: absolute;
+.content-article {
+  display: none;
+  padding: 40px;
 }
-.news {
-  width: 100%;
-  height: 180px;
-  color: #fff;
-}
-.news .newsTitle {
-  height: 40px;
-  width: 160px;
-  float: left;
-  font-size: 16px;
-  color: #d8943a;
-}
-.news .newsMore {
-  float: right;
-  height: 40px;
-  width: 80px;
-  font-size: 18px;
-}
-.news .newsList {
-  height: 140px;
-  width: 260px;
-  float: left;
-}
-.news .newsList ul li {
-  margin-top: 10px;
-}
-.news .newsList ul li a {
-  color: #fff;
-}
-.news .newsList ul li .listTitle {
-  display: inline-block;
-  width: 150px;
-  height: 20px;
-  overflow: hidden;
-}
-.news .newsList ul li .listDate {
-  display: inline-block;
-  float: right;
-}
-.joinUs {
-  width: 100%;
-  height: 180px;
-  color: #fff;
-}
-.joinUs .joinUsTitle {
-  height: 40px;
+.content-head-title {
+  font-size: 28px;
+  border-bottom: 5px solid #898000;
   width: 120px;
   float: left;
-  background-color: #ed2;
+}
+.content-head-title-eng {
+  font-size: 16px;
+  display: block;
+  text-align: left;
+  line-height: 52px;
+  color: #bbb;
+}
+.content-main-head {
+  height: 45px;
+  border-bottom: 1px solid #ddd;
+}
+.introduction-company {
+  font-size: 20px;
+  text-align: left;
+  color: #898000;
+  line-height: 60px;
+}
+.introduction-company-eng {
+  font-size: 14px;
+  text-align: left;
+  color: #898000;
+  margin-bottom: 10px;
+}
+.introduction tr td {
+  font-size: 14px;
+  text-align: left;
+  color: #333;
+  line-height: 30px;
+}
+#cooperation-support,
+#cooperation-line,
+#cooperation-standard,
+#cooperation-return {
+  width: 125px;
+  float: left;
+  border-right: 2px solid #333;
+  font-size: 16px;
+}
+#cooperation-support-content,
+#cooperation-line-content,
+#cooperation-standard-content,
+#cooperation-return-content {
+  display: none;
+}
+.cooperation {
+  width: 100%;
+  height: 30px;
+}
+.cooperation .cooperation-head {
+  width: 100%;
+  height: 100%;
+}
+.cooperation .cooperation-head .cooperation-head-wrap {
+  width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.cooperation .cooperation-head .cooperation-head-wrap .cooperation-click {
+  color: #898000;
+}
+.brand-introduction-img,
+.movies {
+  height: 400px;
+  width: 640px;
+  margin: 20px auto;
 }
