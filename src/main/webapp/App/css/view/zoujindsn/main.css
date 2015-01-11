@@ -401,6 +401,7 @@ a.cbule5:visited {
   position: absolute;
   left: 78%;
   top: 80px;
+  z-index: 2;
 }
 .headMain .headRightHide .weixinHide {
   display: none;
@@ -572,6 +573,7 @@ a.cbule5:visited {
   float: left;
   border-right: 2px solid #333;
   font-size: 16px;
+  cursor: pointer;
 }
 #cooperation-support-content,
 #cooperation-line-content,

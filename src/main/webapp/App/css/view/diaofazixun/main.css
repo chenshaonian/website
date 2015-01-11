@@ -401,6 +401,7 @@ a.cbule5:visited {
   position: absolute;
   left: 78%;
   top: 80px;
+  z-index: 2;
 }
 .headMain .headRightHide .weixinHide {
   display: none;
@@ -429,6 +430,7 @@ a.cbule5:visited {
   height: 200px;
   display: none;
   position: absolute;
+  z-index: 2;
 }
 .headSubDivWrap {
   position: relative;
@@ -477,116 +479,60 @@ a.cbule5:visited {
 .headSubImg img {
   margin-top: 20px;
 }
-.content {
-  height: 660px;
-  min-width: 1080px;
-  overflow-y: hidden;
+.content .content-main {
+  height: 450px;
+  margin-top: 20px;
 }
-.contentWrap {
-  margin-top: 480px;
+.content .content-main .content-detail-wrap {
+  height: 450px;
+  width: 1080px;
+  display: none;
 }
-.contentDiv {
-  width: 260px;
-  height: 180px;
+.content .content-main .content-detail-wrap .content-xinwendongtai-left,
+.content .content-main .content-detail-wrap .content-xinwendongtai-right,
+.content .content-main .content-detail-wrap .content-chanpinzixun-left,
+.content .content-main .content-detail-wrap .content-chanpinzixun-right {
+  height: 450px;
+  width: 540px;
   float: left;
-  margin: 0 5px;
-  position: relative;
-  overflow: hidden;
 }
-.contentDiv img {
-  width: 100%;
-  height: 180px;
+.content .content-main .actived {
+  display: block;
 }
-.productInfo {
-  width: 100%;
-  height: 180px;
-  color: #fff;
+.content .content-main .content-detail-list {
+  height: 400px;
 }
-.productInfo .pruductTitle {
+.content .content-main .content-detail-list li {
   height: 40px;
-  width: 160px;
-  float: left;
-  font-size: 16px;
-  color: #d8943a;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 50px;
+  font-weight: bold;
 }
-.productInfo .productMore {
-  float: right;
-  height: 40px;
-  width: 80px;
-  font-size: 18px;
+.content .content-main .content-detail-list li .list-item-wrap {
+  color: #123;
 }
-.productInfo .productList {
-  height: 140px;
-  width: 260px;
-  float: left;
-}
-.productInfo .productList .productListImg {
-  height: 80px;
-  width: 80px;
-  margin: 5px;
-  background-color: #e27c79;
-  float: left;
-}
-.productInfo .productList .productListSummary {
-  height: 120px;
-  width: 160px;
-  text-align: center;
-  float: left;
-}
-.contentNews,
-.contentProduct,
-.contentJoin {
-  width: 100%;
-  height: 360px;
-  position: absolute;
-}
-.news {
-  width: 100%;
-  height: 180px;
-  color: #fff;
-}
-.news .newsTitle {
-  height: 40px;
-  width: 160px;
-  float: left;
-  font-size: 16px;
-  color: #d8943a;
-}
-.news .newsMore {
-  float: right;
-  height: 40px;
-  width: 80px;
-  font-size: 18px;
-}
-.news .newsList {
-  height: 140px;
-  width: 260px;
-  float: left;
-}
-.news .newsList ul li {
-  margin-top: 10px;
-}
-.news .newsList ul li a {
-  color: #fff;
-}
-.news .newsList ul li .listTitle {
-  display: inline-block;
-  width: 150px;
-  height: 20px;
-  overflow: hidden;
-}
-.news .newsList ul li .listDate {
-  display: inline-block;
+.content .content-main .content-detail-list li .list-item-wrap .item-right {
   float: right;
 }
-.joinUs {
-  width: 100%;
-  height: 180px;
-  color: #fff;
+.content .content-nav {
+  height: 50px;
+  width: 1080px;
 }
-.joinUs .joinUsTitle {
-  height: 40px;
-  width: 120px;
+.content .content-nav .content-nav-wrap {
+  height: 50px;
+  width: 1080px;
+}
+.content .content-nav .content-nav-wrap .content-nav-item {
+  height: 50px;
+  width: 540px;
   float: left;
-  background-color: #ed2;
+  font-size: 20px;
+  line-height: 50px;
+  color: #eee;
+  cursor: pointer;
+  background-color: #034f2b;
+}
+.content .content-nav .content-nav-wrap .clicked {
+  background-color: #898000;
 }

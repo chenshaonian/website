@@ -6,8 +6,6 @@ define([
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
-//			'mouseenter  .contentDiv':'contentDivEnter',
-//			'mouseleave .contentDiv':'contentDivLeave'
 		},
 		initialize: function () {
 			console.info('init app');

@@ -1,0 +1,19 @@
+<div class="content-detail-list">
+	<ul>
+		<@$.each(data, function(i, v){@>
+		<@var id = v.id;@>
+		<@var href = '#!chanpinzixun/'+v.id;@>
+		<li id=<@=id@> >
+			<a href=<@=href@> >
+				<div class="list-item-wrap">
+				<span><@=v.title@></span>
+				<span class="item-right"><@=v.date@></span>
+				</div>
+			</a>
+		</li>
+		<@})@>
+	</ul>
+</div>
+<div id="pagination">
+
+</div>

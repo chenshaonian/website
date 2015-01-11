@@ -36,6 +36,9 @@ requirejs.config({
 		string: './lib/underscore/string',
 		underscoreString: './lib/underscore/underscore.string',
 
+		pagination         : './lib/plugin/jquery/pagination/jquery.pagination',
+
+
 		/* asset */
 		JSON: './lib/plugin/asset/JSON2/JSON2',
 		jstween: './lib/plugin/asset/jstween-1.1/jstween-1.1',

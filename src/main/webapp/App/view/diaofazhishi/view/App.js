@@ -6,16 +6,16 @@ define([
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
+			'click .content-main-nav-item': 'navClick'
 //			'mouseenter  .contentDiv':'contentDivEnter',
 //			'mouseleave .contentDiv':'contentDivLeave'
 		},
 		initialize: function () {
-			console.info('init app');
+			this.renderView();
 			this.initializeVar();
 			this.initializeEl();
 			this.initializeEvent();
 			this.initializeRouter();
-			this.renderView();
 		},
 		initializeVar: function () {
 			var me = this;
@@ -32,49 +32,40 @@ define([
 			var view;
 			me.on('init', function(router){
 				switch (router) {
-					case 'help':
-						alert('help');
+					case 'jishuguanzhan':
+						me.showView('jishuguanzhan');
+						break;
+					case 'dingzhiliucheng':
+						me.showView('dingzhiliucheng');
+						break;
+					case 'gongyijianbie':
+						me.showView('gongyijianbie');
 						break;
 					default :
-						alert('news id: '+router)
-						console.info();
-//						require(['./Index'], function (view) {
-//							console.info('require view');
-//							view = new view();
-							me.$el.html(tpl);
-//						});
-//						break;
+						me.showView('jishuguanzhan');
 				}
 			})
 		},
+		navClick  :function(e){
+			var me = this;
+			var $el = $($(e.currentTarget)[0]);
+			var elId= $el[0].id;
+			var router = '#!' + elId;
+			me.router.navigate(router, {trigger: true});
+		},
+		showView  :function(id){
+			var me = this;
+			var articleId = (id || '') + '-main';
+			console.info('showview');
+			console.info('articleId',articleId);
+			me.$('.content-main-nav-item').removeClass('clicked');
+			$('#'+id).addClass('clicked');
+			$('#'+articleId).siblings().hide();
+			$('#'+articleId).show();
+		},
 		renderView  :function(){
 			var me = this;
-//			console.info('renderview');
-//			me.$el.html(tpl);
-//		},
-//		contentDivEnter  :function(e){
-//			var me = this;
-//			var currTarget = $(e.currentTarget).find('div:first');
-//			if(currTarget.is(':animated')){
-//				console.info('isanimate');
-//				return false;
-//			}
-//			currTarget.animate({
-//				top: -180
-//			},300);
-//			console.info(currTarget);
-//		},
-//		contentDivLeave  :function(e){
-//			var me = this;
-//			var currTarget = $(e.currentTarget).find('div:first');
-//			if(currTarget.is(':animated')){
-//				console.info('isanimate');
-//				return false;
-//			}
-//			console.info(currTarget);
-//			currTarget.animate({
-//				top: 0
-//			},300);
+			me.$el.html(tpl);
 		}
 	});
 });
