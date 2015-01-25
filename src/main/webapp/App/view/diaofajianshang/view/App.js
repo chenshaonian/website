@@ -10,7 +10,6 @@ define([
 			'click #peidaiyanshi1': 'peidaiyanshiShow',
 			'click #peidaiyanshi2': 'peidaiyanshiShow',
 			'click .layoverdiv':'layoverdiv'
-
 		},
 		initialize: function () {
 			this.renderView();
@@ -18,6 +17,7 @@ define([
 			this.initializeEl();
 			this.initializeEvent();
 			this.initializeRouter();
+			this.initializeNavPosition();
 		},
 		initializeVar: function () {
 			var me = this;
@@ -46,7 +46,21 @@ define([
 					default :
 						me.showView('zengbudiaofa');
 				}
-			})
+			});
+			$(window).on('resize', me.initializeNavPosition)
+		},
+		initializeNavPosition  :function(){
+			var me = this;
+			var clientHeight = document.documentElement.clientHeight;
+			var navHeight = $('.navbox').height();
+			var peidaiyanshiHeigh = clientHeight - navHeight - 30 ;
+			$('.content-main-nav').css({top: navHeight});
+			$('.headSubDiv').css({top: navHeight});
+			if(peidaiyanshiHeigh < 600){
+				return;
+			}else {
+				$('.peidaiyanshi-main').css({height: peidaiyanshiHeigh+'px'});
+			}
 		},
 		peidaiyanshiShow  :function(e){
 			var me = this;

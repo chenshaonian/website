@@ -21,6 +21,7 @@ define([
 			this.initializeEl();
 			this.initializeEvent();
 			this.initializeRouter();
+			this.initializeNavPosition();
 		},
 		initializeVar: function () {
 			var me = this;
@@ -28,13 +29,13 @@ define([
 			 * 每页显示多少条消费历史
 			 * @type {number}
 			 */
-			me.pageSize = 10;
+			me.pageSize = 11;
 			/**
 			 * 当前消费历史为第几页,索引从0开始
 			 * @type {number}
 			 */
 			me.pageNum = 0;
-			new mockajax();
+//			new mockajax();
 		},
 		initializeEl: function () {
 			var me = this;
@@ -46,16 +47,57 @@ define([
 		initializeEvent  :function(){
 			var me = this;
 			var view;
-			me.on('init', function(router){
-				switch (router) {
-					case 'xinwendongtai':
-						me.showView('xinwendongtai');
-						break;
-					case 'chanpinzixun':
-						me.showView('chanpinzixun');
-						break;
-					default :
-						me.showView('xinwendongtai');
+			me.on('init', function(router) {
+				console.info('init', router);
+				if (typeof router != 'string') {
+					console.info(router);
+					var type = router[0];
+					var id = router[1];
+					if(type == 'xinwendongtai'){
+						me.getDetailList(type, id);
+					}else if(type == 'chanpinzixun'){
+						me.getDetailList(type, id);
+					}
+
+				}else{
+					console.info(router);
+					switch (router) {
+						case 'xinwendongtai':
+							me.showView('xinwendongtai');
+							break;
+						case 'chanpinzixun':
+							me.showView('chanpinzixun');
+							break;
+						default :
+							me.showView('xinwendongtai');
+					}
+				}
+			})
+		},
+		initializeNavPosition  :function(){
+			var me = this;
+			var navHeight = $('.navbox').height();
+			$('.headSubDiv ').css({top: navHeight});
+		},
+		getDetailList  :function(type, id){
+			var me = this;
+			var ajaxUrl;
+			type = type ||'';
+			id = id || '';
+			ajaxUrl = '/' + type + '/'+ id ;
+			return console.info(ajaxUrl);
+			$.ajax({
+				url: ajaxUrl,
+				method:'post',
+				data:{
+
+				},
+				dataType: 'json',
+				success: function(data){
+					console.log(data);
+				},
+				error: function(err){
+					console.log(err);
 				}
 			})
 		},
@@ -64,6 +106,7 @@ define([
 			var $el = $($(e.currentTarget)[0]);
 			var elId= $el[0].id;
 			var router = '#!' + elId;
+			me.initializeVar();
 			me.router.navigate(router, {trigger: true});
 		},
 		showView  :function(id){
@@ -93,19 +136,19 @@ define([
 					success: function(data){
 						console.log(data);
 						if(data.status == 0 && data.data){
-							var totalPage = data.data.totalPage;
+							var totalPage = data.totalPage;
 							var dataList = data.data.list;
 							me.$('.content-xinwendongtai-right').html(_.template(xinwendongtaitpl, {data: dataList}));
-							me.renderPagination(totalPage);
+							me.renderPagination(totalPage, id);
 						}else{
 							me.$('.content-xinwendongtai-right').html('暂时无法查看新闻动态');
-							me.renderPagination(0);
+							me.renderPagination(0, id);
 						}
 					},
 					error: function(err){
 						console.log(err);
 						me.$('.content-xinwendongtai-right').html('网络错误，请稍后再试');
-						me.renderPagination(0);
+						me.renderPagination(0, id);
 					}
 				})
 			}else if(id == 'chanpinzixun'){
@@ -120,19 +163,20 @@ define([
 					success: function(data){
 						console.log(data);
 						if(data.status == 0 && data.data){
-							var totalPage = data.data.totalPage;
+							var totalPage = data.totalPage;
 							var dataList = data.data.list;
-							me.$('.content-chanpinzixun-left').html(_.template(xinwendongtaitpl, {data: dataList}));
-							me.renderPagination(totalPage);
+							me.$('.content-chanpinzixun-left').html(_.template(chanpinzixuntpl, {data: dataList}));
+							console.info('id>>>>>>', id);
+							me.renderPagination(totalPage, id);
 						}else{
 							me.$('.content-chanpinzixun-left').html('暂时无法查看新闻动态');
-							me.renderPagination(0);
+							me.renderPagination(0, id);
 						}
 					},
 					error: function(err){
 						console.log(err);
 						me.$('.content-chanpinzixun-left').html('网络错误，请稍后再试');
-						me.renderPagination(0);
+						me.renderPagination(0, id);
 					}
 				})
 			}
@@ -141,9 +185,18 @@ define([
 			var me = this;
 			me.$el.html(tpl);
 		},
-		renderPagination          : function (total) {
+		renderPagination          : function (total, id) {
 			var me = this;
-			this.$("#pagination").pagination(total, {
+			var paginationId;
+			console.info(id);
+			if(id == 'xinwendongtai'){
+				paginationId = 'xw_pagination';
+			}else if(id == 'chanpinzixun'){
+				paginationId = 'cp_pagination';
+			}
+			console.info('paginationid',paginationId);
+			console.info('total',total);
+			this.$("#"+paginationId).pagination(total, {
 				items_per_page: me.pageSize,
 				link_to       : 'javascript:;',
 				current_page  : me.pageNum,
@@ -152,6 +205,7 @@ define([
 					} else {
 						me.$('.list_items').remove();
 						me.pageNum = page;
+						me.getDataList(id);
 					}
 					return false;
 				}

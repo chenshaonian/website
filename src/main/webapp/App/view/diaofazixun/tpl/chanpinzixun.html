@@ -3,11 +3,18 @@
 		<@$.each(data, function(i, v){@>
 		<@var id = v.id;@>
 		<@var href = '#!chanpinzixun/'+v.id;@>
-		<li id=<@=id@> > <a href=<@=href@> ><span><@=v.title@></span><span class="item-right"><@=v.date@></span></a></li>
+		<li id=<@=id@> class='list_items'>
+			<a href=<@=href@> >
+				<div class="list-item-wrap">
+				<span><@=v.title@></span>
+				<span class="item-right"><@=v.date@></span>
+				</div>
+			</a>
+		</li>
 
-		<@)@>
+		<@})@>
 	</ul>
 </div>
-<div id="pagination">
+<div id="cp_pagination">
 
 </div>

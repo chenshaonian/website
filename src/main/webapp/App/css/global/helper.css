@@ -262,39 +262,48 @@ a.cbule5:visited {
 .hide {
   display: none;
 }
+.imgWrap {
+  position: relative;
+/*height 640px*/
+  overflow-y: hidden;
+}
 .bgPictureShow {
-  position: absolute;
-  height: 800px;
-  min-width: 1200px;
+  position: relative;
+  min-width: 1080px;
+  height: 100%;
   left: 0;
   top: 0;
   z-index: -1;
 }
 .bgPictureShow .picUl img {
-  height: 800px;
   width: 100%;
 }
 .imgPos {
-  position: fixed;
-  left: 98%;
-  top: 150px;
+  position: absolute;
+  min-left: 960px;
+  top: 350px;
   z-index: 2;
 }
 .imgPos li {
   display: block;
   cursor: pointer;
-  background: url("/App/image/global/indexbg/check.png");
+  height: 16px;
+  width: 16px;
+  background: url("/App/image/global/indexbg/uncheck.png");
+}
+.img_active {
+  background: url("/App/image/global/indexbg/check.png") !important;
 }
 #wrap {
-  height: 660px;
-  width: 1080px;
+/*height 640px*/
+/*width 1080px*/
   margin: 0 auto;
 }
 .navbox {
   margin: 0 auto;
   font-size: 18px;
   line-height: 36px;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
   background-color: #006039;
 }
@@ -303,7 +312,7 @@ a.cbule5:visited {
   height: 100%;
   float: left;
   cursor: pointer;
-  color: #d8943a;
+  color: #e6b06e;
   position: relative;
 }
 .navig:hover {
@@ -329,40 +338,29 @@ a.cbule5:visited {
   display: block;
   width: 100%;
   height: 100%;
-  color: #d8943a;
-  text-decoration: none;
-}
-.headNavWrap li .lit {
-  position: absolute;
-  display: none;
-  width: 120px;
-}
-.headNavWrap li .lit a {
-  text-shadow: 1px 1px 0 #000;
-  line-height: 26px;
-  height: 26px;
-  display: block;
-  color: #fff;
-  font-size: 14px;
+  color: #e6b06e;
   text-decoration: none;
 }
 .navbox .mainNav {
   width: 250px;
   margin-right: 20px;
 }
-.navbox li:hover {
-  background-color: #00482c;
+.headNav li:hover {
+  color: #e6b06e;
+/*border-bottom 1px solid #E6B06E*/
+  background-color: #032613;
 }
 .footerInfo {
   background-color: #006039;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
-  height: 40px;
+  height: 30px;
+  line-height: 30px;
   margin: 0 auto;
+  font-size: 12px;
 }
 .headMain {
-  height: 50px;
-  width: 1080px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -377,30 +375,35 @@ a.cbule5:visited {
   float: left;
 }
 .headMain .headRight {
-  width: 220px;
-  margin-left: 100px;
-  float: left;
+  width: 230px;
+  height: 60px;
+  position: absolute;
+  left: 78%;
+  top: 20px;
 }
 .headMain .headRight .leaveMsg,
 .headMain .headRight .weixin,
 .headMain .headRight .email {
+  width: 72px;
+  height: 36px;
   float: left;
-  margin-right: 10px;
   cursor: pointer;
 }
-.headMain .headRightHide .weixinHide {
+.headMain .headRightHide {
+  width: 230px;
+  height: 60px;
   position: absolute;
+  left: 78%;
+  top: 80px;
+  z-index: 2;
+}
+.headMain .headRightHide .weixinHide {
   display: none;
-  top: 50px;
-  left: 850px;
   width: 150px;
   height: 150px;
 }
 .headMain .headRightHide .emailHide {
-  position: absolute;
   display: none;
-  top: 50px;
-  left: 900px;
   width: 180px;
   height: 40px;
   background-color: #ee0101;
@@ -410,6 +413,7 @@ a.cbule5:visited {
   min-width: 1080px;
   background-color: #00482c;
   margin: 0 auto;
+  font-size: 16px;
 }
 .headNavWrap {
   height: 100%;
@@ -418,9 +422,12 @@ a.cbule5:visited {
 }
 .headSubDiv {
   width: 100%;
-  height: 200px;
+  height: 210px;
   display: none;
   position: absolute;
+  top: 117px;
+  left: 0;
+  z-index: 2;
 }
 .headSubDivWrap {
   position: relative;
@@ -429,16 +436,16 @@ a.cbule5:visited {
 }
 .headSubContent {
   color: #fff;
-  width: 800px;
+  width: 600px;
   height: 100%;
   margin: 0 auto;
 }
 .headSubNavTile {
-  width: 100%;
+  width: 150px;
   margin: 10px 5px;
   height: 30px;
   float: left;
-  cursor: pointer;
+/*cursor pointer*/
   border-bottom: solid 1px #fff;
 }
 .headSubNavTile a {
@@ -447,19 +454,19 @@ a.cbule5:visited {
   height: 26px;
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 .headSubNavTile a:hover {
-  color: #d8943a;
-  background-color: transparent;
+  color: #e6b06e;
+  background-color: none;
 }
 .headSubNav {
   float: left;
   width: 250px;
   height: 100%;
   margin-right: 80px;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 .headSubImg {
   float: left;
@@ -737,39 +744,48 @@ a.cbule5:visited {
 .hide {
   display: none;
 }
+.imgWrap {
+  position: relative;
+/*height 640px*/
+  overflow-y: hidden;
+}
 .bgPictureShow {
-  position: absolute;
-  height: 800px;
-  min-width: 1200px;
+  position: relative;
+  min-width: 1080px;
+  height: 100%;
   left: 0;
   top: 0;
   z-index: -1;
 }
 .bgPictureShow .picUl img {
-  height: 800px;
   width: 100%;
 }
 .imgPos {
-  position: fixed;
-  left: 98%;
-  top: 150px;
+  position: absolute;
+  min-left: 960px;
+  top: 350px;
   z-index: 2;
 }
 .imgPos li {
   display: block;
   cursor: pointer;
-  background: url("/App/image/global/indexbg/check.png");
+  height: 16px;
+  width: 16px;
+  background: url("/App/image/global/indexbg/uncheck.png");
+}
+.img_active {
+  background: url("/App/image/global/indexbg/check.png") !important;
 }
 #wrap {
-  height: 660px;
-  width: 1080px;
+/*height 640px*/
+/*width 1080px*/
   margin: 0 auto;
 }
 .navbox {
   margin: 0 auto;
   font-size: 18px;
   line-height: 36px;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
   background-color: #006039;
 }
@@ -778,7 +794,7 @@ a.cbule5:visited {
   height: 100%;
   float: left;
   cursor: pointer;
-  color: #d8943a;
+  color: #e6b06e;
   position: relative;
 }
 .navig:hover {
@@ -804,40 +820,29 @@ a.cbule5:visited {
   display: block;
   width: 100%;
   height: 100%;
-  color: #d8943a;
-  text-decoration: none;
-}
-.headNavWrap li .lit {
-  position: absolute;
-  display: none;
-  width: 120px;
-}
-.headNavWrap li .lit a {
-  text-shadow: 1px 1px 0 #000;
-  line-height: 26px;
-  height: 26px;
-  display: block;
-  color: #fff;
-  font-size: 14px;
+  color: #e6b06e;
   text-decoration: none;
 }
 .navbox .mainNav {
   width: 250px;
   margin-right: 20px;
 }
-.navbox li:hover {
-  background-color: #00482c;
+.headNav li:hover {
+  color: #e6b06e;
+/*border-bottom 1px solid #E6B06E*/
+  background-color: #032613;
 }
 .footerInfo {
   background-color: #006039;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
-  height: 40px;
+  height: 30px;
+  line-height: 30px;
   margin: 0 auto;
+  font-size: 12px;
 }
 .headMain {
-  height: 50px;
-  width: 1080px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -852,30 +857,35 @@ a.cbule5:visited {
   float: left;
 }
 .headMain .headRight {
-  width: 220px;
-  margin-left: 100px;
-  float: left;
+  width: 230px;
+  height: 60px;
+  position: absolute;
+  left: 78%;
+  top: 20px;
 }
 .headMain .headRight .leaveMsg,
 .headMain .headRight .weixin,
 .headMain .headRight .email {
+  width: 72px;
+  height: 36px;
   float: left;
-  margin-right: 10px;
   cursor: pointer;
 }
-.headMain .headRightHide .weixinHide {
+.headMain .headRightHide {
+  width: 230px;
+  height: 60px;
   position: absolute;
+  left: 78%;
+  top: 80px;
+  z-index: 2;
+}
+.headMain .headRightHide .weixinHide {
   display: none;
-  top: 50px;
-  left: 850px;
   width: 150px;
   height: 150px;
 }
 .headMain .headRightHide .emailHide {
-  position: absolute;
   display: none;
-  top: 50px;
-  left: 900px;
   width: 180px;
   height: 40px;
   background-color: #ee0101;
@@ -885,6 +895,7 @@ a.cbule5:visited {
   min-width: 1080px;
   background-color: #00482c;
   margin: 0 auto;
+  font-size: 16px;
 }
 .headNavWrap {
   height: 100%;
@@ -893,9 +904,12 @@ a.cbule5:visited {
 }
 .headSubDiv {
   width: 100%;
-  height: 200px;
+  height: 210px;
   display: none;
   position: absolute;
+  top: 117px;
+  left: 0;
+  z-index: 2;
 }
 .headSubDivWrap {
   position: relative;
@@ -904,16 +918,16 @@ a.cbule5:visited {
 }
 .headSubContent {
   color: #fff;
-  width: 800px;
+  width: 600px;
   height: 100%;
   margin: 0 auto;
 }
 .headSubNavTile {
-  width: 100%;
+  width: 150px;
   margin: 10px 5px;
   height: 30px;
   float: left;
-  cursor: pointer;
+/*cursor pointer*/
   border-bottom: solid 1px #fff;
 }
 .headSubNavTile a {
@@ -922,19 +936,19 @@ a.cbule5:visited {
   height: 26px;
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 .headSubNavTile a:hover {
-  color: #d8943a;
-  background-color: transparent;
+  color: #e6b06e;
+  background-color: none;
 }
 .headSubNav {
   float: left;
   width: 250px;
   height: 100%;
   margin-right: 80px;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 .headSubImg {
   float: left;

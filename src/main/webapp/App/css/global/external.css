@@ -1,5 +1,7 @@
 .litMask {
 	position: absolute;
+	top: 0;
+	left: 0;
 	height: 78px;
 	width: 120px;
 	display: none;
@@ -10,13 +12,15 @@
 
 .headSubMask {
 	position: absolute;
-	height: 200px;
+	top: 0;
+	left: 0;
+	height: 100%;
 	width: 100%;
 	display: block;
 	background-color: #000000;
-	opacity: 0.2;
+	opacity: 0.5;
 	z-index: -1;
-	filter: alpha(opacity=20);
+	filter: alpha(opacity=50);
 }
 .contentDivMask {
 	width: 260px;
@@ -24,12 +28,18 @@
 	float: left;
 	position: relative;
 	overflow: hidden;
-	opacity: 0.5;
-	filter : alpha(opacity = 50);
+	opacity: 0.7;
+	filter : alpha(opacity = 70);
 	z-index: -1;
-	background: #111;
+	background-color: #111;
 }
 .contentDiv img{
 	opacity: 0.5;
 	filter : alpha(opacity = 50);
+}
+.content-img-item-mask {
+	filter: alpha(opacity=0.5);
+}
+.fc-word-mask{
+	filter: alpha(opacity=0.5);
 }

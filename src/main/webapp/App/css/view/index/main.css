@@ -262,22 +262,26 @@ a.cbule5:visited {
 .hide {
   display: none;
 }
+.imgWrap {
+  position: relative;
+/*height 640px*/
+}
 .bgPictureShow {
-  position: absolute;
-  height: 800px;
+  position: relative;
   min-width: 1080px;
+  height: 100%;
   left: 0;
   top: 0;
+  overflow-y: hidden;
   z-index: -1;
 }
 .bgPictureShow .picUl img {
-  height: 800px;
   width: 100%;
 }
 .imgPos {
-  position: fixed;
-  left: 98%;
-  top: 150px;
+  position: absolute;
+  top: 100px;
+  right: 30px;
   z-index: 2;
 }
 .imgPos li {
@@ -291,15 +295,15 @@ a.cbule5:visited {
   background: url("/App/image/global/indexbg/check.png") !important;
 }
 #wrap {
-  height: 640px;
-  width: 1080px;
+/*height 640px*/
+/*width 1080px*/
   margin: 0 auto;
 }
 .navbox {
   margin: 0 auto;
   font-size: 18px;
   line-height: 36px;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
   background-color: #006039;
 }
@@ -308,7 +312,7 @@ a.cbule5:visited {
   height: 100%;
   float: left;
   cursor: pointer;
-  color: #d8943a;
+  color: #e6b06e;
   position: relative;
 }
 .navig:hover {
@@ -334,36 +338,26 @@ a.cbule5:visited {
   display: block;
   width: 100%;
   height: 100%;
-  color: #d8943a;
-  text-decoration: none;
-}
-.headNavWrap li .lit {
-  position: absolute;
-  display: none;
-  width: 120px;
-}
-.headNavWrap li .lit a {
-  text-shadow: 1px 1px 0 #000;
-  line-height: 26px;
-  height: 26px;
-  display: block;
-  color: #fff;
-  font-size: 14px;
+  color: #e6b06e;
   text-decoration: none;
 }
 .navbox .mainNav {
   width: 250px;
   margin-right: 20px;
 }
-.navbox li:hover {
-  background-color: #00482c;
+.headNav li:hover {
+  color: #e6b06e;
+/*border-bottom 1px solid #E6B06E*/
+  background-color: #032613;
 }
 .footerInfo {
   background-color: #006039;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
-  height: 40px;
+  height: 30px;
+  line-height: 30px;
   margin: 0 auto;
+  font-size: 12px;
 }
 .headMain {
   width: 100%;
@@ -401,6 +395,7 @@ a.cbule5:visited {
   position: absolute;
   left: 78%;
   top: 80px;
+  z-index: 2;
 }
 .headMain .headRightHide .weixinHide {
   display: none;
@@ -418,6 +413,7 @@ a.cbule5:visited {
   min-width: 1080px;
   background-color: #00482c;
   margin: 0 auto;
+  font-size: 16px;
 }
 .headNavWrap {
   height: 100%;
@@ -426,9 +422,11 @@ a.cbule5:visited {
 }
 .headSubDiv {
   width: 100%;
-  height: 200px;
+  height: 210px;
   display: none;
   position: absolute;
+  top: 117px;
+  left: 0;
   z-index: 2;
 }
 .headSubDivWrap {
@@ -438,16 +436,16 @@ a.cbule5:visited {
 }
 .headSubContent {
   color: #fff;
-  width: 800px;
+  width: 600px;
   height: 100%;
   margin: 0 auto;
 }
 .headSubNavTile {
-  width: 100%;
+  width: 150px;
   margin: 10px 5px;
   height: 30px;
   float: left;
-  cursor: pointer;
+/*cursor pointer*/
   border-bottom: solid 1px #fff;
 }
 .headSubNavTile a {
@@ -456,19 +454,19 @@ a.cbule5:visited {
   height: 26px;
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 .headSubNavTile a:hover {
-  color: #d8943a;
-  background-color: transparent;
+  color: #e6b06e;
+  background-color: none;
 }
 .headSubNav {
   float: left;
   width: 250px;
   height: 100%;
   margin-right: 80px;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 .headSubImg {
   float: left;
@@ -479,16 +477,20 @@ a.cbule5:visited {
   margin-top: 20px;
 }
 .content {
-  height: 640px;
+/*height 640px*/
+  bottom: 0;
   min-width: 1080px;
   overflow-y: hidden;
+  margin-top: -160px;
 }
 .contentWrap {
-  margin-top: 480px;
+  height: 160px;
+  width: 1080px;
+  margin: 0 auto;
 }
 .contentDiv {
   width: 260px;
-  height: 180px;
+  height: 160px;
   float: left;
   margin: 0 5px;
   position: relative;
@@ -502,37 +504,47 @@ a.cbule5:visited {
   width: 100%;
   height: 180px;
   color: #fff;
+  padding: 0 10px;
 }
 .productInfo .pruductTitle {
   height: 40px;
+  line-height: 40px;
+  text-align: left;
   width: 160px;
   float: left;
   font-size: 16px;
-  color: #d8943a;
+  color: #e6b06e;
 }
 .productInfo .productMore {
   float: right;
   height: 40px;
+  line-height: 40px;
+  text-align: right;
   width: 80px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .productInfo .productList {
   height: 140px;
-  width: 260px;
+  width: 240px;
+  margin-top: 15px;
   float: left;
 }
 .productInfo .productList .productListImg {
   height: 80px;
   width: 80px;
-  margin: 5px;
+  margin-right: 20px;
   float: left;
   background: url("/App/image/global/logo/diaofashishang.jpg") no-repeat center;
 }
 .productInfo .productList .productListSummary {
   height: 120px;
-  width: 160px;
-  text-align: center;
+  width: 140px;
+  text-align: left;
   float: left;
+  font-size: 14px;
+}
+.productInfo .productList .productListSummary a:hover {
+  text-decoration: underline;
 }
 .contentNews,
 .contentProduct,
@@ -540,32 +552,41 @@ a.cbule5:visited {
   width: 100%;
   height: 360px;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 .news {
   width: 100%;
   height: 180px;
   color: #fff;
+  padding: 0 10px;
 }
 .news .newsTitle {
   height: 40px;
+  line-height: 40px;
   width: 160px;
   float: left;
   font-size: 16px;
-  color: #d8943a;
+  color: #e6b06e;
+  text-align: left;
 }
 .news .newsMore {
   float: right;
   height: 40px;
+  line-height: 40px;
+  text-align: right;
   width: 80px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .news .newsList {
   height: 140px;
-  width: 260px;
+  width: 240px;
   float: left;
+  font-size: 14px;
 }
 .news .newsList ul li {
-  margin-top: 10px;
+  margin-top: 4px;
+  text-align: left;
 }
 .news .newsList ul li a {
   color: #fff;
@@ -576,33 +597,42 @@ a.cbule5:visited {
   height: 20px;
   overflow: hidden;
 }
+.news .newsList ul li .listTitle:hover {
+  text-decoration: underline;
+}
 .news .newsList ul li .listDate {
   display: inline-block;
   float: right;
+  font-size: 12px;
 }
 .joinUs {
   width: 100%;
   height: 180px;
   color: #fff;
+  padding: 0 10px;
 }
 .joinUs .joinUsTitle {
   height: 40px;
+  line-height: 40px;
+  text-align: left;
   width: 180px;
   font-size: 16px;
-  color: #d8943a;
+  color: #e6b06e;
 }
 .joinUs .joinUsIntroduction {
   height: 80px;
-  width: 260px;
   text-align: left;
+  font-size: 14px;
 }
 .joinUs .hotTelphone {
-  color: #898000;
-  font-size: 18px;
+  color: #e6b06e;
+  font-size: 16px;
+  text-align: left;
 }
 .videoFrame {
   position: absolute;
   top: 100px;
+  left: 0;
   height: 500px;
   width: 520px;
   margin: 0 auto;

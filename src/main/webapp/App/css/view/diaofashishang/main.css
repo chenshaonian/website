@@ -262,22 +262,26 @@ a.cbule5:visited {
 .hide {
   display: none;
 }
+.imgWrap {
+  position: relative;
+/*height 640px*/
+}
 .bgPictureShow {
-  position: absolute;
-  height: 800px;
+  position: relative;
   min-width: 1080px;
+  height: 100%;
   left: 0;
   top: 0;
+  overflow-y: hidden;
   z-index: -1;
 }
 .bgPictureShow .picUl img {
-  height: 800px;
   width: 100%;
 }
 .imgPos {
-  position: fixed;
-  left: 98%;
-  top: 150px;
+  position: absolute;
+  top: 100px;
+  right: 30px;
   z-index: 2;
 }
 .imgPos li {
@@ -291,15 +295,15 @@ a.cbule5:visited {
   background: url("/App/image/global/indexbg/check.png") !important;
 }
 #wrap {
-  height: 640px;
-  width: 1080px;
+/*height 640px*/
+/*width 1080px*/
   margin: 0 auto;
 }
 .navbox {
   margin: 0 auto;
   font-size: 18px;
   line-height: 36px;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
   background-color: #006039;
 }
@@ -308,7 +312,7 @@ a.cbule5:visited {
   height: 100%;
   float: left;
   cursor: pointer;
-  color: #d8943a;
+  color: #e6b06e;
   position: relative;
 }
 .navig:hover {
@@ -334,36 +338,26 @@ a.cbule5:visited {
   display: block;
   width: 100%;
   height: 100%;
-  color: #d8943a;
-  text-decoration: none;
-}
-.headNavWrap li .lit {
-  position: absolute;
-  display: none;
-  width: 120px;
-}
-.headNavWrap li .lit a {
-  text-shadow: 1px 1px 0 #000;
-  line-height: 26px;
-  height: 26px;
-  display: block;
-  color: #fff;
-  font-size: 14px;
+  color: #e6b06e;
   text-decoration: none;
 }
 .navbox .mainNav {
   width: 250px;
   margin-right: 20px;
 }
-.navbox li:hover {
-  background-color: #00482c;
+.headNav li:hover {
+  color: #e6b06e;
+/*border-bottom 1px solid #E6B06E*/
+  background-color: #032613;
 }
 .footerInfo {
   background-color: #006039;
-  color: #d8943a;
+  color: #e6b06e;
   min-width: 1080px;
-  height: 40px;
+  height: 30px;
+  line-height: 30px;
   margin: 0 auto;
+  font-size: 12px;
 }
 .headMain {
   width: 100%;
@@ -401,6 +395,7 @@ a.cbule5:visited {
   position: absolute;
   left: 78%;
   top: 80px;
+  z-index: 2;
 }
 .headMain .headRightHide .weixinHide {
   display: none;
@@ -418,6 +413,7 @@ a.cbule5:visited {
   min-width: 1080px;
   background-color: #00482c;
   margin: 0 auto;
+  font-size: 16px;
 }
 .headNavWrap {
   height: 100%;
@@ -426,9 +422,12 @@ a.cbule5:visited {
 }
 .headSubDiv {
   width: 100%;
-  height: 200px;
+  height: 210px;
   display: none;
   position: absolute;
+  top: 117px;
+  left: 0;
+  z-index: 2;
 }
 .headSubDivWrap {
   position: relative;
@@ -437,16 +436,16 @@ a.cbule5:visited {
 }
 .headSubContent {
   color: #fff;
-  width: 800px;
+  width: 600px;
   height: 100%;
   margin: 0 auto;
 }
 .headSubNavTile {
-  width: 100%;
+  width: 150px;
   margin: 10px 5px;
   height: 30px;
   float: left;
-  cursor: pointer;
+/*cursor pointer*/
   border-bottom: solid 1px #fff;
 }
 .headSubNavTile a {
@@ -455,19 +454,19 @@ a.cbule5:visited {
   height: 26px;
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 .headSubNavTile a:hover {
-  color: #d8943a;
-  background-color: transparent;
+  color: #e6b06e;
+  background-color: none;
 }
 .headSubNav {
   float: left;
   width: 250px;
   height: 100%;
   margin-right: 80px;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 .headSubImg {
   float: left;
@@ -477,116 +476,95 @@ a.cbule5:visited {
 .headSubImg img {
   margin-top: 20px;
 }
-.content {
-  height: 660px;
-  min-width: 1080px;
-  overflow-y: hidden;
+#wrap {
+  height: 100%;
+  width: 100%;
+  background-color: #303030;
 }
-.contentWrap {
-  margin-top: 480px;
+.content-wrap {
+  margin: 0 auto;
 }
-.contentDiv {
-  width: 260px;
-  height: 180px;
+.content-wrap .content-img-wrap {
+  margin: 0 auto;
+  height: 640px;
+}
+.content-img-item {
   float: left;
-  margin: 0 5px;
+  width: 25%;
+  height: 100%;
   position: relative;
-  overflow: hidden;
+  cursor: pointer;
 }
-.contentDiv img {
-  width: 100%;
-  height: 180px;
-}
-.productInfo {
-  width: 100%;
-  height: 180px;
-  color: #fff;
-}
-.productInfo .pruductTitle {
-  height: 40px;
-  width: 160px;
-  float: left;
-  font-size: 16px;
-  color: #d8943a;
-}
-.productInfo .productMore {
-  float: right;
-  height: 40px;
-  width: 80px;
-  font-size: 18px;
-}
-.productInfo .productList {
-  height: 140px;
-  width: 260px;
-  float: left;
-}
-.productInfo .productList .productListImg {
-  height: 80px;
-  width: 80px;
-  margin: 5px;
-  background-color: #e27c79;
-  float: left;
-}
-.productInfo .productList .productListSummary {
-  height: 120px;
-  width: 160px;
-  text-align: center;
-  float: left;
-}
-.contentNews,
-.contentProduct,
-.contentJoin {
-  width: 100%;
-  height: 360px;
+.content-img-item .content-img-item-mask {
+  display: block;
   position: absolute;
-}
-.news {
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  height: 180px;
-  color: #fff;
+  background-color: #000;
+  opacity: 0.5;
 }
-.news .newsTitle {
-  height: 40px;
-  width: 160px;
+.fc-content-wrap {
+  height: 660px;
+  width: 1080px;
+  margin: 0 auto;
+}
+.fc-content-wrap .fc-content-left {
   float: left;
-  font-size: 16px;
-  color: #d8943a;
+  width: 65%;
+  height: 100%;
 }
-.news .newsMore {
-  float: right;
-  height: 40px;
-  width: 80px;
-  font-size: 18px;
-}
-.news .newsList {
-  height: 140px;
-  width: 260px;
+.fc-content-wrap .fc-content-left .fc-left-up {
   float: left;
+  height: 400px;
+  width: 98%;
+  position: relative;
+  margin: 5px;
 }
-.news .newsList ul li {
-  margin-top: 10px;
+.fc-content-wrap .fc-content-left .fc-left-dleft {
+  float: left;
+  height: 240px;
+  width: 33%;
+  position: relative;
+  margin: 5px;
 }
-.news .newsList ul li a {
-  color: #fff;
+.fc-content-wrap .fc-content-left .fc-left-dright {
+  float: left;
+  height: 240px;
+  width: 63%;
+  position: relative;
+  margin: 5px;
 }
-.news .newsList ul li .listTitle {
-  display: inline-block;
-  width: 150px;
-  height: 20px;
+.fc-content-wrap .fc-content-right {
+  float: left;
+  width: 33%;
+  height: 640px;
+  margin: 5px;
+}
+.fc-content-wrap .fc-content-right .fc-content-right-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.fc-word-mask {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.fc-words {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 0 30px;
+  font-size: 14px;
+  line-height: 25px;
+  height: 50px;
   overflow: hidden;
-}
-.news .newsList ul li .listDate {
-  display: inline-block;
-  float: right;
-}
-.joinUs {
-  width: 100%;
-  height: 180px;
-  color: #fff;
-}
-.joinUs .joinUsTitle {
-  height: 40px;
-  width: 120px;
-  float: left;
-  background-color: #ed2;
+  color: #eee;
 }

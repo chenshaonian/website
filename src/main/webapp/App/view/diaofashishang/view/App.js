@@ -1,19 +1,20 @@
 define([
 	'require',
 	'text!../tpl/tpl.html',
+	'text!../tpl/shishangqianyan.html',
 	'../router/Router'
-], function (require, tpl, Router) {
+], function (require, tpl, shishangqianyan, Router) {
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
+			'mouseenter .content-img-item':'imgHover'
 		},
 		initialize: function () {
-			console.info('init app');
 			this.initializeVar();
 			this.initializeEl();
 			this.initializeEvent();
 			this.initializeRouter();
-			this.renderView();
+			this.initializeNavPosition();
 		},
 		initializeVar: function () {
 			var me = this;
@@ -30,49 +31,35 @@ define([
 			var view;
 			me.on('init', function(router){
 				switch (router) {
-					case 'help':
-						alert('help');
+					case 'shishangqianyan':
+						me.showView('shishangqianyan');
 						break;
 					default :
-						alert('news id: '+router)
-						console.info();
-//						require(['./Index'], function (view) {
-//							console.info('require view');
-//							view = new view();
-							me.$el.html(tpl);
-//						});
-//						break;
+						me.showView('diaofafengchao');
 				}
 			})
 		},
-		renderView  :function(){
+		initializeNavPosition  :function(){
 			var me = this;
-//			console.info('renderview');
-//			me.$el.html(tpl);
-//		},
-//		contentDivEnter  :function(e){
-//			var me = this;
-//			var currTarget = $(e.currentTarget).find('div:first');
-//			if(currTarget.is(':animated')){
-//				console.info('isanimate');
-//				return false;
-//			}
-//			currTarget.animate({
-//				top: -180
-//			},300);
-//			console.info(currTarget);
-//		},
-//		contentDivLeave  :function(e){
-//			var me = this;
-//			var currTarget = $(e.currentTarget).find('div:first');
-//			if(currTarget.is(':animated')){
-//				console.info('isanimate');
-//				return false;
-//			}
-//			console.info(currTarget);
-//			currTarget.animate({
-//				top: 0
-//			},300);
+			var navHeight = $('.navbox').height();
+			$('.headSubDiv ').css({top: navHeight});
+		},
+		renderView  :function(){
+		},
+		imgHover  :function(e){
+			var me = this;
+			var $el = $(e.currentTarget);
+			$el.siblings().find('.content-img-item-mask').show();
+			$el.find('.content-img-item-mask').hide();
+		},
+		showView  :function(id){
+			var me = this;
+			id = id || '';
+			if(id == 'shishangqianyan'){
+				me.$el.html(shishangqianyan);
+			}else {
+				me.$el.html(tpl);
+			}
 		}
 	});
 });

@@ -20,7 +20,7 @@ define([
 			this.initializeEl();
 			this.initializeEvent();
 			this.initializeRouter();
-
+			this.initializeNavPosition();
 		},
 		initializeVar: function () {
 			var me = this;
@@ -55,6 +55,11 @@ define([
 				}
 			})
 		},
+		initializeNavPosition  :function(){
+			var me = this;
+			var navHeight = $('.navbox').height();
+			$('.headSubDiv ').css({top: navHeight});
+		},
 		movieShow  :function(){
 			var me = this;
 			require([
@@ -85,10 +90,25 @@ define([
 			var me = this;
 			var elId = id||'';
 			var contentId = elId+'-main';
-			me.$('.catalog-item').removeClass('item-atived');
+			var itemList ;
+			var index;
+			itemList = me.$('.catalog-item');
+			itemList.removeClass('item-atived');
 			$('#'+elId).addClass('item-atived');
 			me.$('.content-article').hide();
 			me.$('#'+contentId).show();
+
+			$('.catalog-item-in').css({
+				'border-bottom': '1px solid #eee'
+			});
+			index = itemList.index(me.$('#'+elId));
+			if(index < 1){
+				return;
+			}
+			console.info(itemList[index-1]);
+			$(itemList[index-1]).find('.catalog-item-in').css({
+				'border-bottom': 'none'
+			});
 		},
 		showMovie  :function(){
 			var me = this;

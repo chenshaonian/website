@@ -16,6 +16,7 @@ define([
 			this.initializeEl();
 			this.initializeEvent();
 			this.initializeRouter();
+			this.initializeNavPosition();
 		},
 		initializeVar: function () {
 			var me = this;
@@ -45,6 +46,11 @@ define([
 						me.showView('jishuguanzhan');
 				}
 			})
+		},
+		initializeNavPosition  :function(){
+			var me = this;
+			var navHeight = $('.navbox').height();
+			$('.headSubDiv ').css({top: navHeight});
 		},
 		navClick  :function(e){
 			var me = this;

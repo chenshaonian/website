@@ -76,4 +76,26 @@
 			}
 		}, 150);
 	});
+
+	$(window).on('resize', function(){
+		var me = this;
+		console.info('paaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+		var clientHeight = document.documentElement.clientHeight;
+		var clientWidth= document.documentElement.clientWidth;
+		var navHeight = $('.navbox').height();
+		$('.headSubDiv ').css({top: navHeight});
+		if(clientWidth < 1080){
+			$('.imgPos').css({left: '1050px'});
+		}else{
+			$('.imgPos').css({left: clientWidth - 30 + 'px'});
+		}
+//		var clientHeight = document.documentElement.clientHeight ;
+//		console.info(clientHeight);
+//		console.info(me.$('ul .picUl'));
+//		$('ul .picUl').css({
+//			'height': clientHeight,
+//			'overflow': 'hidden'
+//		})
+	});
+
 })();

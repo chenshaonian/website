@@ -13,11 +13,18 @@ define([
 		},
 		routes: {
 			"": "main",
-			'!:id': 'initView'
+			'!:type': 'initView',
+			'!:type/:id': 'initViewArray'
 		},
 		initView: function (router) {
 			var me = this;
+			console.info('initview',router);
 			me.view.trigger('init', arguments[0]||'');
+		},
+		initViewArray: function (router) {
+			var me = this;
+			console.info('initViewArray',arguments);
+			me.view.trigger('init', arguments ||[]);
 		},
 		main: function () {
 			var me = this;
