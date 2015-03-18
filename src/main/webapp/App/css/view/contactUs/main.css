@@ -289,10 +289,10 @@ a.cbule5:visited {
   cursor: pointer;
   height: 16px;
   width: 16px;
-  background: url("/App/image/global/indexbg/uncheck.png");
+  background: url("/App/image/global/indexbg/6.png");
 }
 .img_active {
-  background: url("/App/image/global/indexbg/check.png") !important;
+  background: url("/App/image/global/indexbg/5.png") !important;
 }
 #wrap {
 /*height 640px*/
@@ -379,7 +379,7 @@ a.cbule5:visited {
   height: 60px;
   position: absolute;
   left: 78%;
-  top: 20px;
+  top: 30px;
 }
 .headMain .headRight .leaveMsg,
 .headMain .headRight .weixin,
@@ -398,15 +398,15 @@ a.cbule5:visited {
   z-index: 2;
 }
 .headMain .headRightHide .weixinHide {
-  display: none;
   width: 150px;
   height: 150px;
+  display: none;
+  padding-top: 25px;
 }
 .headMain .headRightHide .emailHide {
   display: none;
   width: 180px;
   height: 40px;
-  background-color: #ee0101;
 }
 .headNav {
   height: 36px;
@@ -478,126 +478,6 @@ a.cbule5:visited {
 }
 #wrap {
   background-color: #eee;
-}
-.content-left {
-  float: left;
-  width: 220px;
-  height: 600px;
-}
-.content-right {
-  float: left;
-  width: 860px;
-  height: 100%;
-}
-.catalog-list {
-  float: left;
-  width: 220px;
-  height: 600px;
-}
-.catalog-list .catalog-head {
-  margin: 10px auto;
-}
-.catalog-list .catalog-erweiCode {
-  padding-top: 15px;
-  background-color: #054f2c;
-}
-.catalog-items {
-  background-color: #054f2c;
-  cursor: pointer;
-}
-.catalog-items .catalog-item {
-  height: 55px;
-  line-height: 55px;
-  font-size: 18px;
-  color: #eee;
-}
-.catalog-items .catalog-item .catalog-item-in {
-  height: 55px;
-  width: 120px;
-  border-bottom: 1px solid #eee;
+  height: 800px;
   margin: 0 auto;
-}
-.catalog-items .item-atived {
-  background-color: #898000;
-}
-.catalog-items .item-atived .catalog-item-in {
-  border-bottom: none;
-}
-.content-article {
-  display: none;
-  padding: 40px;
-}
-.content-head-title {
-  font-size: 28px;
-  border-bottom: 5px solid #898000;
-  width: 120px;
-  float: left;
-}
-.content-head-title-eng {
-  font-size: 16px;
-  display: block;
-  text-align: left;
-  line-height: 52px;
-  color: #bbb;
-}
-.content-main-head {
-  height: 45px;
-  border-bottom: 1px solid #ddd;
-}
-.introduction-company {
-  font-size: 20px;
-  text-align: left;
-  color: #898000;
-  line-height: 60px;
-}
-.introduction-company-eng {
-  font-size: 14px;
-  text-align: left;
-  color: #898000;
-  margin-bottom: 10px;
-}
-.introduction tr td {
-  font-size: 14px;
-  text-align: left;
-  color: #333;
-  line-height: 30px;
-}
-#cooperation-support,
-#cooperation-line,
-#cooperation-standard,
-#cooperation-return {
-  width: 125px;
-  float: left;
-  border-right: 2px solid #333;
-  font-size: 16px;
-  cursor: pointer;
-}
-#cooperation-support-content,
-#cooperation-line-content,
-#cooperation-standard-content,
-#cooperation-return-content {
-  display: none;
-}
-.cooperation {
-  width: 100%;
-  height: 30px;
-}
-.cooperation .cooperation-head {
-  width: 100%;
-  height: 100%;
-}
-.cooperation .cooperation-head .cooperation-head-wrap {
-  width: 500px;
-  height: 100%;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-.cooperation .cooperation-head .cooperation-head-wrap .cooperation-click {
-  color: #898000;
-}
-.brand-introduction-img,
-.movies {
-  height: 400px;
-  width: 640px;
-  margin: 20px auto;
 }

@@ -289,10 +289,10 @@ a.cbule5:visited {
   cursor: pointer;
   height: 16px;
   width: 16px;
-  background: url("/App/image/global/indexbg/uncheck.png");
+  background: url("/App/image/global/indexbg/6.png");
 }
 .img_active {
-  background: url("/App/image/global/indexbg/check.png") !important;
+  background: url("/App/image/global/indexbg/5.png") !important;
 }
 #wrap {
 /*height 640px*/
@@ -379,7 +379,7 @@ a.cbule5:visited {
   height: 60px;
   position: absolute;
   left: 78%;
-  top: 20px;
+  top: 30px;
 }
 .headMain .headRight .leaveMsg,
 .headMain .headRight .weixin,
@@ -398,15 +398,15 @@ a.cbule5:visited {
   z-index: 2;
 }
 .headMain .headRightHide .weixinHide {
-  display: none;
   width: 150px;
   height: 150px;
+  display: none;
+  padding-top: 25px;
 }
 .headMain .headRightHide .emailHide {
   display: none;
   width: 180px;
   height: 40px;
-  background-color: #ee0101;
 }
 .headNav {
   height: 36px;

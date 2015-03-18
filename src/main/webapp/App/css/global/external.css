@@ -33,10 +33,6 @@
 	z-index: -1;
 	background-color: #111;
 }
-.contentDiv img{
-	opacity: 0.5;
-	filter : alpha(opacity = 50);
-}
 .content-img-item-mask {
 	filter: alpha(opacity=0.5);
 }

@@ -8,8 +8,8 @@ define([
 		el: $('#wrap'),
 		events: {
 			'click .movieShow': 'movieShow',
-			'mouseenter  .contentDiv':'contentDivEnter',
-			'mouseleave .contentDiv':'contentDivLeave',
+//			'mouseenter  .contentDiv':'contentDivEnter',
+//			'mouseleave .contentDiv':'contentDivLeave',
 			'click .layoverdiv':'layoverdiv'
 		},
 		initialize: function () {

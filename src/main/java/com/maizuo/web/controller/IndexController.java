@@ -83,6 +83,12 @@ public class IndexController extends BaseController {
         m.put("user", user);
         return "view/contactUs";
     }
+    @RequestMapping(value = {"/message" },method = RequestMethod.GET)
+    public String message(HttpServletRequest request, ModelMap m) {
+        User user = new User();//userService.getUserById(1);
+        m.put("user", user);
+        return "view/message";
+    }
     @RequestMapping(value = {"/map" },method = RequestMethod.GET)
     public String map(HttpServletRequest request, ModelMap m) {
         return "view/map";

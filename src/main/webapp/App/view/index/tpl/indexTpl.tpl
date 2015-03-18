@@ -19,11 +19,11 @@
 <div class="content">
 	<div class="contentWrap">
 		<div class="contentDiv movieShow">
-			<img src="../../App/image/view/index/shipin.png" alt=""/>
+			<img src="../../App/image/view/index/shipin2.png" alt=""/>
 		</div>
 		<div class="contentDiv">
 			<div class="contentProduct">
-				<img src="../../App/image/view/index/chanpinzixun.png" alt=""/>
+				<!--<img src="../../App/image/view/index/chanpinzixun.png" alt=""/>-->
 				<div class="productInfo">
 					<div class="pruductTitle">| 雕发时尚 <span style="font-size: 14px">Fashion</span></div>
 					<div class="productMore"><a href="#">More</a></div>
@@ -38,7 +38,7 @@
 		</div>
 		<div class="contentDiv">
 			<div class="contentNews">
-				<img src="../../App/image/view/index/xinwenzixun.png" alt=""/>
+				<!--<img src="../../App/image/view/index/xinwenzixun.png" alt=""/>-->
 
 				<div class="news">
 					<div class="newsTitle">| 新闻资讯 <span style="font-size: 14px">News</span></div>
@@ -57,7 +57,7 @@
 		</div>
 		<div class="contentDiv ">
 			<div class="contentJoin">
-				<img src="../../App/image/view/index/jiamenghezuo.png" alt=""/>
+				<!--<img src="../../App/image/view/index/jiamenghezuo.png" alt=""/>-->
 				<div class="joinUs">
 					<div class="joinUsTitle">| 加盟合作 <span style="font-size: 14px">Cooperation</span></div>
 					<div class="joinUsIntroduction">
