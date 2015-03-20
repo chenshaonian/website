@@ -347,11 +347,10 @@ a.cbule5:visited {
 }
 .headNav li:hover {
   color: #e6b06e;
-/*border-bottom 1px solid #E6B06E*/
   background-color: #032613;
 }
 .footerInfo {
-  background-color: #006039;
+  background-color: #00482c;
   color: #e6b06e;
   min-width: 1080px;
   height: 30px;
@@ -474,7 +473,7 @@ a.cbule5:visited {
   height: 100%;
 }
 .headSubImg img {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .content {
   height: 660px;

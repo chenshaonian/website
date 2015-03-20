@@ -61,7 +61,7 @@
 				<div class="joinUs">
 					<div class="joinUsTitle">| 加盟合作 <span style="font-size: 14px">Cooperation</span></div>
 					<div class="joinUsIntroduction">
-						阿斯顿金佛爬山的经费怕是多晶硅片现场将股票恢复噶我陪广发大盘管家婆人感觉然后该频道苟富贵的阿股份和分工会u
+                                    欢迎广大朋友加盟合作，共享时尚美好生活...
 					</div>
 					<div class="hotTelphone">咨询热线：0755-<span style="font-size: 24px">26656882</span></div>
 				</div>
