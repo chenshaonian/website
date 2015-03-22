@@ -51,7 +51,7 @@ define([
 						me.renderItem('lianxiwomen');
 						break;
 					default :
-						me.renderItem('pinpaijianjie');
+						me.renderItem('jiamenghezuo');
 				}
 			})
 		},

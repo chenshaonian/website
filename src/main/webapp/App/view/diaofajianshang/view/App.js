@@ -34,6 +34,9 @@ define([
 			var view;
 			me.on('init', function(router){
 				switch (router) {
+					case 'zhubozaoxing':
+						me.showView('zhubozaoxing');
+						break;
 					case 'zengbudiaofa':
 						me.showView('zengbudiaofa');
 						break;
@@ -44,7 +47,7 @@ define([
 						me.showView('peidaiyanshi');
 						break;
 					default :
-						me.showView('zengbudiaofa');
+						me.showView('zhubozaoxing');
 				}
 			});
 			$(window).on('resize', me.initializeNavPosition)
@@ -91,11 +94,11 @@ define([
 		showView  :function(id){
 			var me = this;
 			var articleId = (id || '') + '-main';
-			console.info('showview');
-			console.info('articleId',articleId);
-
+			var maskId = (id || '') + 'mask';
 			me.$('.content-main-nav-item').removeClass('clicked');
+			me.$('.content-main-nav-mask-item').removeClass('clicked');
 			$('#'+id).addClass('clicked');
+			$('#'+maskId).addClass('clicked');
 			$('#'+articleId).siblings().hide();
 			$('#'+articleId).show();
 		},

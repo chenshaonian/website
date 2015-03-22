@@ -1,36 +1,44 @@
+.navbox
+	position fixed
+	z-index 2
 #wrap
 	height 100%
 	width 1080px
 	margin 0 auto
+	padding-top 140px
 .content-img
 	position relative
 	img
 		height 400px
 		width 1080px
-
 .content-main-nav
 	height 50px
 	position absolute
 	bottom 0
-	left 270px
-
+	left 220px
+	.content-main-nav-mask-item
+		width 160px
+		height 50px
+		float left
+		background-color #094424
+		color #EEEEEE
+		font-size 16px
+		line-height 50px
+		cursor pointer
 	.content-main-nav-wrap
 		position absolute
 		top 0
 		left 0
 		margin 0 auto
-		width 540px
+		width 640px
 		.content-main-nav-item
-			width 180px
+			width 160px
 			float left
-			background-color #094424
 			color #EEEEEE
-			font-size 18px
+			font-size 16px
 			line-height 50px
 			border-right 1px dashed #eee
 			cursor pointer
-		.clicked
-			background-color #8A7C0C
 .content-main-article
 	display none
 	padding 40px

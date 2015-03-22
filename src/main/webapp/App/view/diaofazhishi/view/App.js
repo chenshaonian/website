@@ -42,8 +42,11 @@ define([
 					case 'gongyijianbie':
 						me.showView('gongyijianbie');
 						break;
+                    case 'peixunzhongxin':
+                        me.showView('peixunzhongxin');
+                        break;
 					default :
-						me.showView('jishuguanzhan');
+						me.showView('peixunzhongxin');
 				}
 			})
 		},
@@ -61,13 +64,16 @@ define([
 		},
 		showView  :function(id){
 			var me = this;
-			var articleId = (id || '') + '-main';
+            id = id || '';
+			var articleId = id + '-main';
+            var maskId = id + 'mask';
 			console.info('showview');
 			console.info('articleId',articleId);
-			me.$('.content-main-nav-item').removeClass('clicked');
+            me.$('.content-main-nav-item').removeClass('clicked');
+            me.$('.content-main-nav-mask-item').removeClass('clicked');
 			$('#'+id).addClass('clicked');
-			$('#'+articleId).siblings().hide();
-			$('#'+articleId).show();
+            $('#'+maskId).addClass('clicked');
+			$('#'+articleId).show().siblings().hide();
 		},
 		renderView  :function(){
 			var me = this;
