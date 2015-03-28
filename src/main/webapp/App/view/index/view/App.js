@@ -53,6 +53,21 @@ define([
 			});
 
 //			$(window).on('resize',function(){
+//				var windowHeight = $(window).height();
+//				var windowWidth = $(window).width();
+//				var imgRetio = 1821/839;
+//				var retio = windowWidth/windowHeight;
+//
+//				if (retio > imgRetio) {
+//					$('.bgPictureShow .picUl img').css({width: '100%'});
+//					console.log('width 100%')
+//				} else {
+//					$('.bgPictureShow .picUl img').css({height: '100%'});
+//					console.log('height 100%')
+//				}
+
+
+
 //				var clientHeight = document.documentElement.clientHeight;
 //				var clientWidth= document.documentElement.clientWidth;
 //				var imgOriginRatio = 1821/839;
@@ -60,7 +75,7 @@ define([
 //				var imgHeight = $('.imgWrap').height();
 //				var imgWidth = $('.imgWrap').width();
 //				var navHeight = $('.navbox').height();
-//
+
 //				console.info('clientHeight',clientHeight);
 //				console.info('clientWidth',clientWidth);
 //				console.info('imgOriginRatio',imgOriginRatio);

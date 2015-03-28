@@ -19,11 +19,13 @@
 <div class="content">
 	<div class="contentWrap">
 		<div class="contentDiv movieShow">
-			<img src="../../App/image/view/index/shipin2.png" alt=""/>
-		</div>
+            <div class="contentProduct">
+			    <img src="../../App/image/view/index/shipin2.png" alt=""/>
+            </div>
+            <div class="contentDivMask"></div>
+        </div>
 		<div class="contentDiv">
 			<div class="contentProduct">
-				<!--<img src="../../App/image/view/index/chanpinzixun.png" alt=""/>-->
 				<div class="productInfo">
 					<div class="pruductTitle">| 雕发时尚 <span style="font-size: 14px">Fashion</span></div>
 					<div class="productMore"><a href="#">More</a></div>

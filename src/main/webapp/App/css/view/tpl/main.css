@@ -275,8 +275,17 @@ a.cbule5:visited {
   overflow-y: hidden;
   z-index: -1;
 }
+.bgPictureShow .picUl li {
+  overflow: hidden;
+}
 .bgPictureShow .picUl img {
   width: 100%;
+}
+.widthPro {
+  width: 100% !important;
+}
+.heightPro {
+  height: 100%;
 }
 .imgPos {
   position: absolute;

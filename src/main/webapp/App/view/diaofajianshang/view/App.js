@@ -54,6 +54,7 @@ define([
 		},
 		initializeNavPosition  :function(){
 			var me = this;
+			console.log('resize nav pos')
 			var clientHeight = document.documentElement.clientHeight;
 			var navHeight = $('.navbox').height();
 			var peidaiyanshiHeigh = clientHeight - navHeight - 30 ;

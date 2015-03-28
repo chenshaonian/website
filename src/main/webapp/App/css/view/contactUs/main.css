@@ -275,8 +275,17 @@ a.cbule5:visited {
   overflow-y: hidden;
   z-index: -1;
 }
+.bgPictureShow .picUl li {
+  overflow: hidden;
+}
 .bgPictureShow .picUl img {
   width: 100%;
+}
+.widthPro {
+  width: 100% !important;
+}
+.heightPro {
+  height: 100%;
 }
 .imgPos {
   position: absolute;
@@ -479,6 +488,101 @@ a.cbule5:visited {
 }
 #wrap {
   background-color: #eee;
-  height: 800px;
+}
+.content {
+  width: 1080px;
   margin: 0 auto;
+  padding-top: 40px;
+}
+.content-head {
+  height: 45px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 33px;
+}
+.content-head-title {
+  font-size: 28px;
+  border-bottom: 5px solid #898000;
+  width: 120px;
+  float: left;
+}
+.content-head-title-eng {
+  font-size: 16px;
+  display: block;
+  text-align: left;
+  line-height: 52px;
+  color: #bbb;
+}
+.content-main {
+  margin-top: 50px;
+  height: 700px;
+  width: 100%;
+}
+.content-left {
+  float: left;
+  width: 540px;
+  height: 400px;
+}
+.content-right {
+  float: left;
+  width: 540px;
+  height: 400px;
+  padding-left: 75px;
+}
+.content-message {
+  height: 200px;
+}
+.content-name,
+.content-phone,
+.content-email {
+  height: 60px;
+}
+.content-word {
+  float: left;
+  width: 100px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 18px;
+  text-align: left;
+}
+.content-tip {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+}
+#submitBtn {
+  height: 50px;
+  width: 130px;
+  margin: 0 auto;
+  line-height: 50px;
+  font-size: 18px;
+  color: #eee;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #898100;
+  cursor: pointer;
+}
+#message {
+  height: 175px;
+  width: 440px;
+  font-size: 18px;
+}
+#name,
+#phone,
+#email {
+  height: 46px;
+  width: 440px;
+  font-size: 18px;
+}
+.content-right-img img {
+  width: 100%;
+}
+.content-right-word {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+.content-right-erweicode {
+  margin-top: 50px;
 }

@@ -79,16 +79,38 @@
 
 	$(window).on('resize', function(){
 		var me = this;
-		console.info('paaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 		var clientHeight = document.documentElement.clientHeight;
 		var clientWidth= document.documentElement.clientWidth;
 		var navHeight = $('.navbox').height();
-		$('.headSubDiv ').css({top: navHeight});
+			$('.headSubDiv ').css({top: navHeight});
 		if(clientWidth < 1080){
 			$('.imgPos').css({left: '1050px'});
 		}else{
 			$('.imgPos').css({left: clientWidth - 30 + 'px'});
 		}
+
+		var windowHeight = $(window).height();
+		var imgHeight = windowHeight - navHeight - 30;
+		var windowWidth = $(window).width();
+		var imgRetio = 1821/839;
+		var retio = windowWidth/imgHeight;
+		console.info('imgwrap height: ',imgHeight)
+		$('.imgWrap').css({height: imgHeight + 'px'})
+
+		if (retio > imgRetio) {
+//			$('#wrap').css({});
+			$('.picUl img').addClass('widthPro').removeClass('heightPro');
+			console.log('width 100%')
+		} else if(retio < imgRetio) {
+			$('.bgPictureShow .picUl li').css({height: imgHeight});
+			$('.picUl img').addClass('heightPro').removeClass('widthPro');
+			$('.picUl img').css({width: imgHeight * imgRetio + 'px'})
+
+			console.log('height 100%')
+		}
+
+
+
 //		var clientHeight = document.documentElement.clientHeight ;
 //		console.info(clientHeight);
 //		console.info(me.$('ul .picUl'));
@@ -97,5 +119,8 @@
 //			'overflow': 'hidden'
 //		})
 	});
-
+	setTimeout(
+		function () {
+			$('.imgWrap').css({height: $(window).height() - $('.navbox').height() - 30 + 'px'})
+		}, 100);
 })();
