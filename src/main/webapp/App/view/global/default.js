@@ -94,19 +94,14 @@
 		var windowWidth = $(window).width();
 		var imgRetio = 1821/839;
 		var retio = windowWidth/imgHeight;
-		console.info('imgwrap height: ',imgHeight)
 		$('.imgWrap').css({height: imgHeight + 'px'})
-
 		if (retio > imgRetio) {
 //			$('#wrap').css({});
 			$('.picUl img').addClass('widthPro').removeClass('heightPro');
-			console.log('width 100%')
 		} else if(retio < imgRetio) {
 			$('.bgPictureShow .picUl li').css({height: imgHeight});
 			$('.picUl img').addClass('heightPro').removeClass('widthPro');
 			$('.picUl img').css({width: imgHeight * imgRetio + 'px'})
-
-			console.log('height 100%')
 		}
 
 
@@ -122,5 +117,5 @@
 	setTimeout(
 		function () {
 			$('.imgWrap').css({height: $(window).height() - $('.navbox').height() - 30 + 'px'})
-		}, 100);
+		}, 200);
 })();

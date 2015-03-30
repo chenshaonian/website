@@ -47,6 +47,9 @@ define([
 					case 'jiamenghezuo':
 						me.renderItem('jiamenghezuo');
 						break;
+					case 'peixunzhongxin':
+						me.renderItem('peixunzhongxin');
+						break;
 					case 'lianxiwomen':
 						me.renderItem('lianxiwomen');
 						break;

@@ -42,11 +42,8 @@ define([
 					case 'gongyijianbie':
 						me.showView('gongyijianbie');
 						break;
-                    case 'peixunzhongxin':
-                        me.showView('peixunzhongxin');
-                        break;
 					default :
-						me.showView('peixunzhongxin');
+						me.showView('jishuguanzhan');
 				}
 			})
 		},

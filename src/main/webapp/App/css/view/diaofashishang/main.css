@@ -452,7 +452,7 @@ a.cbule5:visited {
 }
 .headSubNavTile {
   width: 150px;
-  margin: 10px 5px;
+  margin: 5px 5px;
   height: 30px;
   float: left;
 /*cursor pointer*/
@@ -490,6 +490,7 @@ a.cbule5:visited {
   height: 100%;
   width: 100%;
   background-color: #303030;
+  position: relative;
 }
 .content-wrap {
   margin: 0 auto;
@@ -519,6 +520,7 @@ a.cbule5:visited {
   height: 660px;
   width: 1080px;
   margin: 0 auto;
+  position: relative;
 }
 .fc-content-wrap .fc-content-left {
   float: left;
@@ -577,4 +579,28 @@ a.cbule5:visited {
   height: 50px;
   overflow: hidden;
   color: #eee;
+}
+.fc-content-arrow-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.fc-content-arrow {
+  position: relative;
+}
+.fc-content-arrow .arrow-left {
+  position: absolute;
+  left: -64px;
+  top: 250px;
+  cursor: pointer;
+}
+.fc-content-arrow .arrow-right {
+  position: absolute;
+  right: -64px;
+  top: 250px;
+  cursor: pointer;
+}
+.active {
+  display: block !important;
 }

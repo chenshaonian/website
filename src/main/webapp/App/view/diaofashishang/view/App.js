@@ -7,7 +7,10 @@ define([
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
-			'mouseenter .content-img-item':'imgHover'
+			'mouseenter .content-img-item':'imgHover',
+			'click .arrow-left': 'arrowLeft',
+			'click .arrow-right': 'arrowRight'
+
 		},
 		initialize: function () {
 			this.initializeVar();
@@ -45,6 +48,16 @@ define([
 			$('.headSubDiv ').css({top: navHeight});
 		},
 		renderView  :function(){
+		},
+		arrowLeft: function () {
+			var me = this;
+			var $nowContent = $('#wrap .active');
+			console.log($nowContent)
+		},
+		arrowRight: function () {
+			var me = this;
+			var $nowContent = $('#wrap .active');
+			console.log($nowContent)
 		},
 		imgHover  :function(e){
 			var me = this;

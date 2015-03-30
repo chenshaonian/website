@@ -452,7 +452,7 @@ a.cbule5:visited {
 }
 .headSubNavTile {
   width: 150px;
-  margin: 10px 5px;
+  margin: 5px 5px;
   height: 30px;
   float: left;
 /*cursor pointer*/
@@ -509,6 +509,9 @@ a.cbule5:visited {
 }
 .catalog-list .catalog-head {
   margin: 10px auto;
+}
+.catalog-list .catalog-head img {
+  width: 100%;
 }
 .catalog-list .catalog-erweiCode {
   padding-top: 15px;
