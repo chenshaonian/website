@@ -3,4 +3,5 @@
     <mapping path="/*" decorator="/WEB-INF/html/decorator/main.html"/>
     <mapping path="/App/*" exclude="true"/>
     <mapping path="/login" exclude="true"/>
+    <mapping path="/manager" exclude="true"/>
 </sitemesh>

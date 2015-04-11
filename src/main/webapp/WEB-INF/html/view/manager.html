@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>戴丝诺</title>
+    <!--<meta name="view" content="view/manager/main"/>-->
+    <!--<meta name="defaultview" content="view/global/default"/>-->
+    <link rel="stylesheet" href="/App/css/view/manager/main.css"/>
+
+    <!--<script type="text/javascript" src="/App/assets/summernote/jquery.js"></script>-->
+    <!--<link rel="stylesheet" href="/App/assets/summernote/bootstrap.min.css" />-->
+    <!--<script type="text/javascript" src="/App/assets/summernote/bootstrap.min.js"></script>-->
+    <!--<link rel="stylesheet" href="/App/assets/summernote/font-awesome.min.css" />-->
+    <!--<link href="/App/assets/summernote/summernote.css" rel="stylesheet">-->
+    <!--<script src="/App/assets/summernote/summernote.js"></script>-->
+
+    <!-- include libs stylesheets -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/codemirror.min.css"/>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/blackboard.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/3.20.0/theme/monokai.min.css">
+
+    <!-- summernote with less and requirejs -->
+    <link rel="stylesheet/less" type="text/css" href="/App/assets/summernote/summernote.css"/>
+    <script data-main="/App/assets/summernote/src/js/app"
+            src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"></script>
+</head>
+<body>
+<div class="header">
+            戴思诺后台管理系统
+</div>
+<div class="content">
+    <div class="nav">
+        <ul>
+            <li>雕发风潮编辑</li>
+            <li>时尚前沿编辑</li>
+            <li>新闻动态编辑</li>
+            <li>产品咨询编辑</li>
+            <li>查看反馈</li>
+        </ul>
+    </div>
+    <div class="edition-wrap">
+        <div class="edition-step">请输入标题：</div>
+        <input class="edition-head-input" type="text"/>
+        <div class="edition-step">请编辑内容：</div>
+        <div id="summernote">
+        </div>
+        <div class="edition-submit">确认提交</div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -215,6 +215,11 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.9</version>
 		</dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.4</version>
+        </dependency>
 		<!--④ 依赖的WEB类库-->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>

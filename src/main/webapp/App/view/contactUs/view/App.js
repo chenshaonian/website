@@ -12,12 +12,18 @@ define([
 			this.renderView();
 			this.initializeVar();
 			this.initializeEl();
+			this.initializeNavPosition();
 		},
 		initializeVar: function () {
 			var me = this;
 		},
 		initializeEl: function () {
 			var me = this;
+		},
+		initializeNavPosition  :function(){
+			var me = this;
+			var navHeight = $('.navbox').height();
+			$('.headSubDiv ').css({top: navHeight});
 		},
 		initializeRouter: function () {
 			var me = this;

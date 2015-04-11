@@ -16,6 +16,14 @@ public class UserController {
 
 	@RequestMapping(value = {"/login"},method = RequestMethod.POST)
 	public String login(HttpServletRequest request, ModelMap m) {
-		return "redirect:/";
+        System.out.println("user/login");
+        String name = request.getParameter("username");
+        String password = request.getParameter("password");
+        System.out.println(name);
+        System.out.println(password);
+        if(name.equals("wuqingquanS") && password.equals("1")){
+            request.getSession().setAttribute("username", "wuqingquanS");
+        }
+        return "redirect:/manager";
 	}
 }

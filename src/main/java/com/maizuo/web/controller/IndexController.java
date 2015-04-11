@@ -107,7 +107,10 @@ public class IndexController extends BaseController {
 	public String login(HttpServletRequest request, ModelMap m) {
 		return "view/login";
 	}
-
+    @RequestMapping(value = {"/manager"},method = RequestMethod.GET)
+    public String manager(HttpServletRequest request, ModelMap m) {
+        return "view/manager";
+    }
 	@RequestMapping("/user/{userId}")
 	@ResponseBody
 	public Result user(HttpServletRequest request, ModelMap mm, @PathVariable int userId) {

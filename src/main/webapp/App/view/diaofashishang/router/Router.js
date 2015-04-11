@@ -13,7 +13,31 @@ define([
 		},
 		routes: {
 			"": "main",
+			'!meifamiji/:id': 'meifamijiView',
+			'!shishangyizhuang/:id': 'shishangyizhuangView',
+			'!zhiganzhuangrong/:id': 'zhiganzhuangrongView',
+			'!lirengushi/:id': 'lirengushiView',
 			'!:id': 'initView'
+		},
+		meifamijiView : function (router){
+			var me = this;
+			console.info(router)
+			me.view.trigger('news', arguments[0]||'');
+		},
+		shishangyizhuangView : function (router){
+			var me = this;
+			console.info(router)
+			me.view.trigger('news', arguments[0]||'');
+		},
+		zhiganzhuangrongView : function (router){
+			var me = this;
+			console.info(router)
+			me.view.trigger('news', arguments[0]||'');
+		},
+		lirengushiView : function (router){
+			var me = this;
+			console.info(router)
+			me.view.trigger('news', arguments[0]||'');
 		},
 		initView: function (router) {
 			var me = this;

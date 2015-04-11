@@ -50,7 +50,21 @@
     filter: alpha(opacity = 80);
     background-color: #094424
 }
+.fc-content-main-nav-wrap-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 640px;
+    height: 50px;
+    opacity: 0.8;
+    filter: alpha(opacity = 80);
+    background-color: #094424
+}
 .content-main-nav-wrap-mask .clicked {
+    background-color: #8A7C0C!important;
+}
+.fc-content-main-nav-wrap-mask .clicked {
     background-color: #8A7C0C!important;
 }
 .diaofajianshang-nav-wrap-mask{
@@ -66,3 +80,13 @@
 .diaofajianshang-nav-wrap-mask .clicked {
      background-color: #8A7C0C!important;
  }
+.news-wrap-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    filter: alpha(opacity = 20);
+    z-index: -2
+}
