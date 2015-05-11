@@ -584,3 +584,53 @@ a.cbule5:visited {
 .pagination .next {
   color: #333;
 }
+.news-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+.news-main {
+  position: fixed;
+  z-index: 9999;
+  left: 20%;
+  top: 30px;
+  width: 800px;
+  background: #fff;
+  max-height: 650px;
+  overflow-y: scroll;
+  display: block;
+}
+.news-wrap-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.3;
+  background: #000;
+}
+.close-btn {
+  position: fixed;
+  z-index: 9999;
+  left: 20%;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  background: #8b7e01;
+  font-size: 20px;
+  cursor: pointer;
+}
+.brand-introduction-words {
+  font-size: 14px;
+  text-align: left;
+}
+.brand-introduction-words .brand-introduction-words-title {
+  font-size: 16px;
+}

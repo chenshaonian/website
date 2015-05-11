@@ -7,7 +7,7 @@ define([
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
-			'click .movieShow': 'movieShow',
+//			'click .movieShow': 'movieShow',
 //			'mouseenter  .contentDiv':'contentDivEnter',
 //			'mouseleave .contentDiv':'contentDivLeave',
 			'click .layoverdiv':'layoverdiv'

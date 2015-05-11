@@ -60,7 +60,7 @@ define([
 				});
 console.info(nowIndex);
 				//开始切换图片
-				if (nowIndex < 3) {
+				if (nowIndex < 2) {
 					$($lists).eq(nowIndex).removeClass('show');
 					$($lists).eq(nowIndex + 1).addClass('show');
 					$($lists_pos).eq(nowIndex).removeClass('img_active');

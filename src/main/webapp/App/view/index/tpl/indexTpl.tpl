@@ -1,10 +1,10 @@
 <div class="imgWrap">
 	<div class="bgPictureShow">
 		<ul class="picUl">
-			<li class="hide show"><img src="../../App/image/global/indexbg/1.jpg"/></li>
-			<li class="hide"><img src="../../App/image/global/indexbg/2.jpg"/></li>
-			<li class="hide"><img src="../../App/image/global/indexbg/3.jpg"/></li>
-			<li class="hide"><img src="../../App/image/global/indexbg/4.jpg"/></li>
+			<li class="hide show"><img src="../../App/image/global/indexbg/home1.png"/></li>
+			<li class="hide"><img src="../../App/image/global/indexbg/home2.png"/></li>
+			<li class="hide"><img src="../../App/image/global/indexbg/home3.png"/></li>
+			<!--<li class="hide"><img src="../../App/image/global/indexbg/4.jpg"/></li>-->
 		</ul>
 	</div>
 	<div class="imgPos">
@@ -12,7 +12,7 @@
 			<li class="img_active" data-index="0"> </li>
 			<li class="" data-index="1"> </li>
 			<li class="" data-index="2"> </li>
-			<li class="" data-index="3"> </li>
+			<!--<li class="" data-index="3"> </li>-->
 		</ul>
 	</div>
 </div>

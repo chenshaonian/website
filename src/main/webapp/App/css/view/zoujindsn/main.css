@@ -582,6 +582,10 @@ a.cbule5:visited {
   color: #333;
   line-height: 30px;
 }
+.cooperation-wrap {
+  font-size: 14px;
+  text-align: left;
+}
 #cooperation-support,
 #cooperation-line,
 #cooperation-standard,
@@ -614,4 +618,11 @@ a.cbule5:visited {
 }
 .cooperation .cooperation-head .cooperation-head-wrap .cooperation-click {
   color: #898000;
+}
+.brand-introduction-words {
+  font-size: 14px;
+  text-align: left;
+}
+.brand-introduction-words .brand-introduction-words-title {
+  font-size: 16px;
 }

@@ -1,10 +1,11 @@
 <div class="content-detail-list">
 	<ul>
 		<@$.each(data, function(i, v){@>
-		<@var id = v.id;@>
+		<@var contentId = v.id;@>
 		<@var href = '#!xinwendongtai/'+v.id;@>
-		<li id=<@=id@> class='list_items'>
-			<a href=<@=href@> >
+        <li id=<@=contentId@> class="list_items xinwentongtai-item" data-item-id=<@=contentId@>>
+
+            <a href="javascript:0;">
 				<div class="list-item-wrap">
 				<span><@=v.title@></span>
 				<span class="item-right"><@=v.date@></span>

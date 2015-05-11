@@ -539,6 +539,13 @@ a.cbule5:visited {
   display: none;
   padding: 40px;
 }
+.content-main-article .article-introduction {
+  text-align: left;
+  font-size: 14px;
+}
+.content-main-article .article-introduction .brand-introduction-words-title {
+  font-size: 16px;
+}
 .content-head-title {
   font-size: 28px;
   border-bottom: 5px solid #898000;
@@ -555,4 +562,8 @@ a.cbule5:visited {
 .content-main-head {
   height: 45px;
   border-bottom: 1px solid #ddd;
+}
+.brand-introduction-words {
+  font-size: 14px;
+  text-align: left;
 }

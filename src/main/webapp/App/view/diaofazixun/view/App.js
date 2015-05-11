@@ -2,16 +2,21 @@ define([
 	'require',
 	'text!../tpl/tpl.html',
 	'text!../tpl/chanpinzixun.html',
-	'text!../tpl/xinwendongtai.html',
+    'text!../tpl/xinwendongtai.html',
+    'text!../tpl/newsTpl.html',
 	'../router/Router',
 	'../mock/mockajax',
 	'pagination'
 
-], function (require, tpl, chanpinzixuntpl, xinwendongtaitpl,  Router, mockajax) {
+], function (require, tpl, chanpinzixuntpl, xinwendongtaitpl,  newsTpl, Router, mockajax) {
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
-			'click .content-nav-item': 'navClick'
+			'click .content-nav-item': 'navClick',
+            'click .chanpinzixun-item': 'chanpinzixunClick',
+            'click .xinwendongtai-item': 'xinwendongtaiClick',
+            'click .close-btn':'closeNews'
+
 //			'mouseenter  .contentDiv':'contentDivEnter',
 //			'mouseleave .contentDiv':'contentDivLeave'
 		},
@@ -79,6 +84,23 @@ define([
 			var navHeight = $('.navbox').height();
 			$('.headSubDiv ').css({top: navHeight});
 		},
+        chanpinzixunClick: function (e) {
+            var me = this;
+            var $el = $(e.currentTarget);
+            var contentId= $el.data('contentId');
+            me.$el.append(newsTpl);
+
+        },
+        xinwendongtaiClick: function (e) {
+            var me = this;
+            var $el = $(e.currentTarget);
+            var contentId= $el.data('contentId');
+            me.$el.append(newsTpl);
+
+        },
+        closeNews: function(){
+            $('.news-wrap').remove();
+        },
 		getDetailList  :function(type, id){
 			var me = this;
 			var ajaxUrl;
@@ -147,7 +169,7 @@ define([
 					},
 					error: function(err){
 						console.log(err);
-						me.$('.content-xinwendongtai-right').html('网络错误，请稍后再试');
+						me.$('.content-xinwendongtai-right').html('敬请期待...');
 						me.renderPagination(0, id);
 					}
 				})
@@ -162,6 +184,9 @@ define([
 					dataType: 'json',
 					success: function(data){
 						console.log(data);
+                        me.$('.content-chanpinzixun-left').html('敬请期待...');
+                        return me.renderPagination(0, id);
+                        //hardcode 逻辑，先显示无列表
 						if(data.status == 0 && data.data){
 							var totalPage = data.totalPage;
 							var dataList = data.data.list;
@@ -175,7 +200,7 @@ define([
 					},
 					error: function(err){
 						console.log(err);
-						me.$('.content-chanpinzixun-left').html('网络错误，请稍后再试');
+						me.$('.content-chanpinzixun-left').html('敬请期待...');
 						me.renderPagination(0, id);
 					}
 				})

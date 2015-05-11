@@ -117,5 +117,5 @@
 	setTimeout(
 		function () {
 			$('.imgWrap').css({height: $(window).height() - $('.navbox').height() - 30 + 'px'})
-		}, 200);
+		}, 500);
 })();

@@ -2,9 +2,14 @@ define([
 	'require',
 	'text!../tpl/diaofafengchaomain.html',
 	'text!../tpl/shishangqianyanmain.html',
-	'../router/Router'
+	'../router/Router',
+    'text!../tpl/newsTpl.html',
+    'text!../tpl/news_leftDL.html',
+    'text!../tpl/news_leftDR.html',
+    'text!../tpl/news_leftUp.html',
+    'text!../tpl/news_rightUp.html'
 
-], function (require, diaofafengchaomain, shishangqianyanmain, Router) {
+], function (require, diaofafengchaomain, shishangqianyanmain, Router, newsTpl, news_leftDL, news_leftDR, news_leftUp, news_rightUp) {
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
@@ -14,7 +19,10 @@ define([
 			'click #meifamiji': 'clickmeifamijiItem',
 			'click #shishangyizhuang': 'clickshishangyizhuangItem',
 			'click #zhiganzhuangrong': 'clickzhiganzhuangrongItem',
-			'click #lirengushi': 'clicklirengushiItem'
+			'click #lirengushi': 'clicklirengushiItem',
+            'click .content-detail': 'diaofafengchaoContentClick',
+            'click .close-btn':'closeNews'
+
 		},
 		initialize: function () {
 			this.initializeVar();
@@ -136,7 +144,24 @@ define([
 			}else {
 				me.$el.html(diaofafengchaomain);
 			}
-		}
+		},
+        diaofafengchaoContentClick: function(e) {
+            var me = this;
+            var $el = $(e.currentTarget);
 
+            var contentId= $el.data('contentId');
+            if (contentId == 'leftDL') {
+                me.$el.append(news_leftDL);
+            } else if (contentId == 'leftDR') {
+                me.$el.append(news_leftDR);
+            } else if (contentId == 'rightUp'){
+                me.$el.append(news_rightUp);
+            } else {
+                me.$el.append(news_leftUp);
+            }
+        },
+        closeNews: function(){
+            $('.news-wrap').remove();
+        }
 	});
 });

@@ -7,8 +7,8 @@ define([
 		el: $('#wrap'),
 		events: {
 			'click .content-main-nav-item': 'navClick',
-			'click #peidaiyanshi1': 'peidaiyanshiShow',
-			'click #peidaiyanshi2': 'peidaiyanshiShow',
+//			'click #peidaiyanshi1': 'peidaiyanshiShow',
+//			'click #peidaiyanshi2': 'peidaiyanshiShow',
 			'click .layoverdiv':'layoverdiv'
 		},
 		initialize: function () {

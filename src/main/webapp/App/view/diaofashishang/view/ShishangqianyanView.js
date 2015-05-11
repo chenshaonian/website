@@ -2,10 +2,35 @@
  * Created by Bernie-pc on 15-4-11.
  */
 define([
+    'require',
 	'text!../tpl/shishangqianyanSub.html',
-	'text!../tpl/newsTpl.html'
-],function (shishangqianyanSub, newsTpl){
-	console.log(123);
+
+    'text!../tpl/news_lirengushi_1.html',
+    'text!../tpl/news_lirengushi_2.html',
+    'text!../tpl/news_meifamiji_1.html',
+    'text!../tpl/news_meifamiji_2.html',
+    'text!../tpl/news_meifamiji_3.html',
+    'text!../tpl/news_meifamiji_4.html',
+    'text!../tpl/news_meifamiji_5.html',
+    'text!../tpl/news_meifamiji_6.html',
+    'text!../tpl/news_shishangyizhuang_1.html',
+    'text!../tpl/news_shishangyizhuang_2.html',
+    'text!../tpl/news_zhiganzhuangrong_1.html',
+    'text!../tpl/news_zhiganzhuangrong_2.html',
+],function (require, shishangqianyanSub,
+            news_lirengushi_1,
+            news_lirengushi_2,
+            news_meifamiji_1,
+            news_meifamiji_2,
+            news_meifamiji_3,
+            news_meifamiji_4,
+            news_meifamiji_5,
+            news_meifamiji_6,
+            news_shishangyizhuang_1,
+            news_shishangyizhuang_2,
+            news_zhiganzhuangrong_1,
+            news_zhiganzhuangrong_2
+    ){
 	return Backbone.View.extend({
 		className: 'content',
 		events: {
@@ -15,7 +40,8 @@ define([
 			'click #zhiganzhuangrong2': 'clickZhiganzhuangrong',
 			'click #lirengushi2': 'clickLirengushi',
 			'click .newsItem': 'showDetailNews',
-			'click .close-btn':'closeNews'
+			'click .close-btn':'closeNews',
+            'click .article-introduction-item': 'clickArticleItem'
 
 		},
 		initialize: function (data) {
@@ -118,7 +144,7 @@ define([
 			console.log(',showNavId', showNavId)
 			$('#'+showNavId).addClass('clicked').siblings().removeClass('clicked');
 			$('#'+showContentId).show().siblings().hide();
-			me.getNews();
+//			me.getNews();
 		},
 		getNews: function(){
 			var me = this;
@@ -134,9 +160,40 @@ define([
 //				}
 //			})
 		},
-		showDetailNews: function(){
+        clickArticleItem: function (e){
+            var me = this;
+            var $el = $(e.currentTarget);
+            var contentId = $el.data('contentId');
+            console.log(contentId)
+            var tplId = 'news_'+contentId;
+            switch (tplId) {
+                case 'news_lirengushi_1': me.$el.append(news_lirengushi_1);break;
+                case 'news_lirengushi_2': me.$el.append(news_lirengushi_2);break;
+                case 'news_meifamiji_1': me.$el.append(news_meifamiji_1);break;
+                case 'news_meifamiji_2': me.$el.append(news_meifamiji_2);break;
+                case 'news_meifamiji_3': me.$el.append(news_meifamiji_3);break;
+                case 'news_meifamiji_4': me.$el.append(news_meifamiji_4);break;
+                case 'news_meifamiji_5': me.$el.append(news_meifamiji_5);break;
+                case 'news_meifamiji_6': me.$el.append(news_meifamiji_6);break;
+                case 'news_shishangyizhuang_1': me.$el.append(news_shishangyizhuang_1);break;
+                case 'news_shishangyizhuang_2': me.$el.append(news_shishangyizhuang_2);break;
+                case 'news_zhiganzhuangrong_1': me.$el.append(news_zhiganzhuangrong_1);break;
+                case 'news_zhiganzhuangrong_2': me.$el.append(news_zhiganzhuangrong_2);break;
+                default : me.$el.append(news_lirengushi_1);break;
+            }
+//            require(['text!../tpl/'+tplId], function (view) {
+//                console.info('require view');
+//                view = new view();
+//                me.$el.html(view.$el);
+//            });
+            me.$el.append('news_' + contentId)
+        },
+		showDetailNews: function(e){
 			var me  = this;
-			me.$el.append(newsTpl)
+            var $el = $(e.currentTarget);
+            var contentId = $el.data('contentId');
+            console.log(e)
+			me.$el.append('content_' + contentId)
 		},
 		closeNews: function(){
 			console.log('213')
