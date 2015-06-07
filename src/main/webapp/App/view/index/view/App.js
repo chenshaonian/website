@@ -1,8 +1,16 @@
 define([
 	'require',
 	'text!../tpl/indexTpl.tpl',
-	'../router/Router'
-], function (require, tpl, Router) {
+	'../router/Router',
+    'text!../tpl/news_xinwendongtai_1.html',
+    'text!../tpl/news_xinwendongtai_2.html',
+    'text!../tpl/news_xinwendongtai_3.html',
+    'text!../tpl/news_xinwendongtai_4.html',
+], function (require, tpl, Router,
+             news_xinwendongtai_1,
+             news_xinwendongtai_2,
+             news_xinwendongtai_3,
+             news_xinwendongtai_4) {
 
 	return Backbone.View.extend({
 		el: $('#wrap'),
@@ -10,7 +18,9 @@ define([
 //			'click .movieShow': 'movieShow',
 //			'mouseenter  .contentDiv':'contentDivEnter',
 //			'mouseleave .contentDiv':'contentDivLeave',
-			'click .layoverdiv':'layoverdiv'
+            'click .news-list-item': 'clickNewsItem',
+            'click .close-btn':'closeNews',
+            'click .layoverdiv':'layoverdiv'
 		},
 		initialize: function () {
 			this.initializeVar();
@@ -29,6 +39,21 @@ define([
 			var me = this;
 			me.router = new Router(me);
 		},
+        closeNews: function(){
+            $('.news-wrap').remove();
+        },
+        clickNewsItem: function(e) {
+            var me = this;
+            var $el = $(e.currentTarget);
+            var contentId= $el.data('contentId');
+            switch (contentId) {
+                case 'xinwendongtai_1': me.$el.append(news_xinwendongtai_1);break;
+                case 'xinwendongtai_2': me.$el.append(news_xinwendongtai_2);break;
+                case 'xinwendongtai_3': me.$el.append(news_xinwendongtai_3);break;
+                case 'xinwendongtai_4': me.$el.append(news_xinwendongtai_4);break;
+                default: me.$el.append(news_xinwendongtai_1);break;
+            }
+        },
 		initializeNavPosition  :function(){
 			var me = this;
 			var navHeight = $('.navbox').height();

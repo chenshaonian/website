@@ -593,6 +593,7 @@ a.cbule5:visited {
   width: 240px;
   float: left;
   font-size: 14px;
+  cursor: pointer;
 }
 .news .newsList ul li {
   margin-top: 4px;
@@ -688,5 +689,47 @@ a.cbule5:visited {
   color: #fff;
   background: #8b7e01;
   font-size: 20px;
-cur
+  cursor: pointer;
+}
+.news-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}
+.news-main {
+  position: fixed;
+  z-index: 9999;
+  left: 20%;
+  top: 30px;
+  width: 800px;
+  background: #fff;
+  max-height: 650px;
+  overflow-y: scroll;
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  line-height: 36px;
+  padding: 20px;
+}
+.content-title {
+  text-align: center;
+  font-size: 16px;
+  color: #4f6228;
+  font-weight: bold;
+}
+.content-title-time {
+  text-align: center;
+  font-size: 12px;
+}
+.content-detail-img {
+  text-align: center;
+}
+.content-detail-erimg {
+  text-align: center;
+  color: #348024;
+  font-size: 16px;
+  font-weight: bold;
 }

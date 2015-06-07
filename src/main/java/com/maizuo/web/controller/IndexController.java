@@ -83,34 +83,34 @@ public class IndexController extends BaseController {
         m.put("user", user);
         return "view/contactUs";
     }
-    @RequestMapping(value = {"/message" },method = RequestMethod.GET)
-    public String message(HttpServletRequest request, ModelMap m) {
-        User user = new User();//userService.getUserById(1);
-        m.put("user", user);
-        return "view/message";
-    }
-    @RequestMapping(value = {"/map" },method = RequestMethod.GET)
-    public String map(HttpServletRequest request, ModelMap m) {
-        return "view/map";
-    }
+//    @RequestMapping(value = {"/message" },method = RequestMethod.GET)
+//    public String message(HttpServletRequest request, ModelMap m) {
+//        User user = new User();//userService.getUserById(1);
+//        m.put("user", user);
+//        return "view/message";
+//    }
+//    @RequestMapping(value = {"/map" },method = RequestMethod.GET)
+//    public String map(HttpServletRequest request, ModelMap m) {
+//        return "view/map";
+//    }
+//
 
 
-
-    @RequestMapping(value = {"/admin"},method = RequestMethod.GET)
-    public String admin(HttpServletRequest request, ModelMap m) {
-        User user = new User();//userService.getUserById(1);
-        m.put("user", user);
-        return "view/admin";
-    }
+//    @RequestMapping(value = {"/admin"},method = RequestMethod.GET)
+//    public String admin(HttpServletRequest request, ModelMap m) {
+//        User user = new User();//userService.getUserById(1);
+//        m.put("user", user);
+//        return "view/admin";
+//    }
 
     @RequestMapping(value = {"/login"},method = RequestMethod.GET)
 	public String login(HttpServletRequest request, ModelMap m) {
 		return "view/login";
 	}
-    @RequestMapping(value = {"/manager"},method = RequestMethod.GET)
-    public String manager(HttpServletRequest request, ModelMap m) {
-        return "view/manager";
-    }
+//    @RequestMapping(value = {"/manager"},method = RequestMethod.GET)
+//    public String manager(HttpServletRequest request, ModelMap m) {
+//        return "view/manager";
+//    }
 	@RequestMapping("/user/{userId}")
 	@ResponseBody
 	public Result user(HttpServletRequest request, ModelMap mm, @PathVariable int userId) {

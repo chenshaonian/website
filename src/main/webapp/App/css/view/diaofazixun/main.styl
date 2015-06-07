@@ -40,12 +40,13 @@
 		height 386px
 		padding-left 50px
 		li
-			height 30px
-			line-height 30px
+			height 50px
+			line-height 50px
 			text-align left
 			font-weight bold
 			font-size 14px
 			list-style-type square
+			cursor: pointer
 			.list-item-wrap
 				color #123
 				.item-right
@@ -55,12 +56,13 @@
 		height 386px
 		padding-right 50px
 		li
-			height 30px
-			line-height 30px
+			height 50px
+			line-height 50px
 			text-align left
 			font-weight bold
 			font-size 14px
 			list-style-type square
+			cursor: pointer
 			.list-item-wrap
 				color #123
 				.item-right
@@ -83,16 +85,40 @@
 	height 500px
 	width 500px
 	margin 0 auto
-.news-main
-	position fixed
-	z-index 9999
-	left 20%
-	top 30px
-	width 800px
-	background #fff
-	max-height 650px
-	overflow-y scroll
-	display block
+.news-main {
+  position fixed
+  z-index 9999
+  left 20%
+  top 30px
+  width 800px
+  background #fff
+  max-height 650px
+  overflow-y scroll
+  display block
+  font-size 14px
+  text-align left
+  line-height 36px
+  padding 20px
+}
+.content-title{
+  text-align center
+  font-size 16px
+  color rgb(79,98,40)
+  font-weight bold
+}
+.content-title-time{
+  text-align center
+  font-size 12px
+}
+.content-detail-img{
+  text-align center
+}
+.content-detail-erimg{
+  text-align center
+  color #348024
+  font-size 16px
+  font-weight bold
+}
 .news-wrap-mask
 	position fixed
 	width 100%

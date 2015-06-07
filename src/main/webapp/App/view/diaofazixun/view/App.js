@@ -1,14 +1,41 @@
 define([
 	'require',
 	'text!../tpl/tpl.html',
-	'text!../tpl/chanpinzixun.html',
+    'text!../tpl/chanpinzixun.html',
     'text!../tpl/xinwendongtai.html',
     'text!../tpl/newsTpl.html',
 	'../router/Router',
 	'../mock/mockajax',
-	'pagination'
+    'text!../tpl/news_chanpinzixun_1.html',
+    'text!../tpl/news_chanpinzixun_2.html',
+    'text!../tpl/news_chanpinzixun_3.html',
+    'text!../tpl/news_chanpinzixun_4.html',
+    'text!../tpl/news_chanpinzixun_5.html',
+    'text!../tpl/news_chanpinzixun_6.html',
+    'text!../tpl/news_xinwendongtai_1.html',
+    'text!../tpl/news_xinwendongtai_2.html',
+    'text!../tpl/news_xinwendongtai_3.html',
+    'text!../tpl/news_xinwendongtai_4.html',
+    'text!../tpl/news_xinwendongtai_5.html',
+    'text!../tpl/news_xinwendongtai_6.html',
 
-], function (require, tpl, chanpinzixuntpl, xinwendongtaitpl,  newsTpl, Router, mockajax) {
+
+    'pagination'
+
+], function (require, tpl, chanpinzixuntpl,  xinwendongtaitpl, newsTpl, Router, mockajax,
+             news_chanpinzixun_1,
+             news_chanpinzixun_2,
+             news_chanpinzixun_3,
+             news_chanpinzixun_4,
+             news_chanpinzixun_5,
+             news_chanpinzixun_6,
+             news_xinwendongtai_1,
+             news_xinwendongtai_2,
+             news_xinwendongtai_3,
+             news_xinwendongtai_4,
+             news_xinwendongtai_5,
+             news_xinwendongtai_6
+    ) {
 	return Backbone.View.extend({
 		el: $('#wrap'),
 		events: {
@@ -40,6 +67,61 @@ define([
 			 * @type {number}
 			 */
 			me.pageNum = 0;
+            me.xinwendongtaimocklist = [
+                {
+                    id: 'xinwendongtai_1',
+                    date: '2015年05月28日',
+
+                    title: '邓小平扮演者江世龙亲临戴丝诺定制造型'
+                },{
+                    id: 'xinwendongtai_2',
+                    date: '2015年04月18日',
+                    title: '香港美女主播安娜化身戴丝诺雕发女神'
+                },{
+                    id: 'xinwendongtai_3',
+                    date: '2015年03月08日',
+                    title: '戴丝诺携手万科举办百变女人节炫动鹏城'
+                },{
+                    id: 'xinwendongtai_4',
+                    date: '2015年01月20日',
+                    title: '戴丝诺联合美薇时尚会所举办名媛发艺沙龙'
+                },{
+                    id: 'xinwendongtai_5',
+                    date: '2015年01月01日',
+                    title: '戴丝诺全国连锁构局之缘系浪漫之城珠海'
+                },{
+                    id: 'xinwendongtai_6',
+                    date: '2014年11月11日',
+                    title: '戴丝诺全国连锁构局之穿越古都西安'
+                }
+            ];
+            me.chanpinzixunmocklist = [
+                {
+                    id: 'chanpinzixun_1',
+                    date: '2015年05月25日',
+                    title: '美国华裔教授发现有望治疗男性脱发的新方法'
+                },{
+                    id: 'chanpinzixun_2',
+                    date: '2015年04月10日',
+                    title: '简单按摩手法有助于护发养发'
+                },{
+                    id: 'chanpinzixun_3',
+                    date: '2015年03月16日',
+                    title: '50至55岁长白发是身体健康的标志'
+                },{
+                    id: 'chanpinzixun_4',
+                    date: '2015年01月05日',
+                    title: '儿童“压力山大”的危害不容忽视'
+                },{
+                    id: 'chanpinzixun_5',
+                    date: '2014年12月08日',
+                    title: '脱发解决方案时尚健康大盘点'
+                },{
+                    id: 'chanpinzixun_6',
+                    date: '2014年11月17日',
+                    title: '为什么年轻人的头发容易脱发'
+                }
+            ];
 //			new mockajax();
 		},
 		initializeEl: function () {
@@ -87,16 +169,47 @@ define([
         chanpinzixunClick: function (e) {
             var me = this;
             var $el = $(e.currentTarget);
-            var contentId= $el.data('contentId');
-            me.$el.append(newsTpl);
+            var contentId= $el.data('itemId');
+//            me.$el.append(newsTpl);
+//            if(contentId === 'chanpinzixun_1') {
+//                alert('chanpinzixun_1111111111111')
+//               $('#wrap').append('123');
+//            } else if (contentId === 'chanpinzixun_2') {
+//                alert('chanpinzixun_2')
+//                me.$el.append(news_chanpinzixun_2);
+//            }else if (contentId === 'chanpinzixun_3') {
+//                return me.$el.append(news_chanpinzixun_3);
+//            }else if (contentId === 'chanpinzixun_4') {
+//                return me.$el.append(news_chanpinzixun_4);
+//            }else if (contentId === 'chanpinzixun_5') {
+//                return me.$el.append(news_chanpinzixun_5);
+//            }else if (contentId === 'chanpinzixun_6') {
+//                return me.$el.append(news_chanpinzixun_6);
+//            }
+            switch (contentId) {
+                case 'chanpinzixun_1':  me.$el.append(news_chanpinzixun_1);break;
+                case 'chanpinzixun_2': me.$el.append(news_chanpinzixun_2);break;
+                case 'chanpinzixun_3': me.$el.append(news_chanpinzixun_3);break;
+                case 'chanpinzixun_4': me.$el.append(news_chanpinzixun_4);break;
+                case 'chanpinzixun_5': me.$el.append(news_chanpinzixun_5);break;
+                case 'chanpinzixun_6': me.$el.append(news_chanpinzixun_6);break;
+                default: me.$el.append(news_chanpinzixun_1);break;
+            }
 
         },
         xinwendongtaiClick: function (e) {
             var me = this;
             var $el = $(e.currentTarget);
-            var contentId= $el.data('contentId');
-            me.$el.append(newsTpl);
-
+            var contentId= $el.data('itemId');
+            switch (contentId) {
+                case 'xinwendongtai_1': me.$el.append(news_xinwendongtai_1);break;
+                case 'xinwendongtai_2': me.$el.append(news_xinwendongtai_2);break;
+                case 'xinwendongtai_3': me.$el.append(news_xinwendongtai_3);break;
+                case 'xinwendongtai_4': me.$el.append(news_xinwendongtai_4);break;
+                case 'xinwendongtai_5': me.$el.append(news_xinwendongtai_5);break;
+                case 'xinwendongtai_6': me.$el.append(news_xinwendongtai_6);break;
+                default: me.$el.append(news_xinwendongtai_1);break;
+            }
         },
         closeNews: function(){
             $('.news-wrap').remove();
@@ -169,13 +282,13 @@ define([
 					},
 					error: function(err){
 						console.log(err);
-						me.$('.content-xinwendongtai-right').html('敬请期待...');
+						me.$('.content-xinwendongtai-right').html(_.template(xinwendongtaitpl, {data: me.xinwendongtaimocklist}));
 						me.renderPagination(0, id);
 					}
 				})
 			}else if(id == 'chanpinzixun'){
 				$.ajax({
-					url:'/getChanpinzixunList',
+					url:'/getChanpinzixunList1',
 					method:'post',
 					data:{
 						pageNum : me.pageNum + 1,
@@ -200,7 +313,7 @@ define([
 					},
 					error: function(err){
 						console.log(err);
-						me.$('.content-chanpinzixun-left').html('敬请期待...');
+						me.$('.content-chanpinzixun-left').html(_.template(chanpinzixuntpl, {data: me.chanpinzixunmocklist}));
 						me.renderPagination(0, id);
 					}
 				})

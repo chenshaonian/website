@@ -488,7 +488,7 @@ a.cbule5:visited {
 }
 #wrap {
   background-color: #eee;
-  height: 800px;
+  height: 1250px;
   width: 1080px;
   margin: 0 auto;
 }
@@ -585,6 +585,12 @@ a.cbule5:visited {
 .cooperation-wrap {
   font-size: 14px;
   text-align: left;
+  margin-top: 36px;
+}
+.cooperation-support-content-sub-title {
+  font-size: 16px;
+  color: #044504;
+  font-weight: bold;
 }
 #cooperation-support,
 #cooperation-line,
@@ -625,4 +631,6 @@ a.cbule5:visited {
 }
 .brand-introduction-words .brand-introduction-words-title {
   font-size: 16px;
+  color: #044504;
+  font-weight: bold;
 }
